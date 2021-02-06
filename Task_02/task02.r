@@ -66,23 +66,26 @@ source("http://jonsmitchell.com/code/plotFxn02b.R")
 #The graph we made using the code given to us in this assignment is very difficult to read and understand because there is very little information obtainable from the graph. The one on eCampus is easier to understand because it shows that as time passes throughout the day and over several days, the amount of total milk increases. This is way easier to understand even without knowing much about these types of graphs. The graph we created does not show anything regarding the time passed throughout the day. This makes it very hard to correlate anything. This causes the data to be in one place rather than spread out to where we may observe it. Hypothesis 3 from above was the one tested. 
 unique(beren3$event)
 #The hypothesis I would like to test is that as Beren has gotten older, he uses the bathroom more frequently. 
-#I have not finished the extra credit yet. I will resubmit this later today when I do. 
 Naps <- which(Data[,9] == 'nap')
-beren4 <- Data[Naps,]
+beren4 <- beren3[Naps,]
 beren4
 startHour <- (beren4$start_hour)
 startMin <- (beren4$start_minute)
 endHour <- (beren4$end_hour)
 endMin <- (beren4$end_minute)
-sleepTime1 <- (endHour - startHour)*(60) 
+startHour
+startMin
+endHour
+endMin
+sleepTime1 <- (endHour - startHour) *(60)
 sleepTime2 <- (endMin - startMin)
 sleepTime1
 sleepTime2
 totalTime <- tapply(sleepTime1, sleepTime2, sum)
 totalTime
 par(las=1, mar=c(5,5,1,1), mgp=c(2, 0.5, 0), tck=-0.01)
-plot(as.numeric(names(totalTime)), totalTime, type="b", pch=16, xlab="age in days", ylab="nap times in minutes")
-startTime <- ((startHour)*60) + startMin
+plot(as.numeric(names(totalTime)), totalTime, type="b", pch=16, xlab="age in days", ylab="nap time in minutes")
+startTime <- (startHour*60) + startMin
 startTime
 cor.test(startTime, totalTime)
-#The nature of the relationship is 
+#The nature of the relationship is negative between the two. 

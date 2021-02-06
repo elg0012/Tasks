@@ -1,233 +1,3 @@
-totalNap
-sum(beren4$age)
-totalNap <- tapply(beren4$sleepTime, beren4$age, sum)
-totalNap
-sum(beren4$sleepTime)
-beren4$sleepTime <- (endHour - startHour)*60
-beren4
-totalNap <- tapply(beren4$sleepTime, beren4$age, sum)
-sum(beren4$sleepTime)
-totalNap <- tapply(beren4$sleepTime, beren4$age, sum)#
-totalNap
-par(las=1, mar=c(5,5,1,1), mgp=c(2, 0.5, 0), tck=-0.01)
-plot(as.numeric(names(totalNap)), totalNap, type="b", pch=16, xlab="age in days", ylab="nap time (in minutes)")
-beren4$sleepTime <- ((endHour - startHour)*60) + (endMin - startMin)
-beren4
-totalNap <- tapply(beren4$sleepTime, beren4$age, sum)
-totalNap
-par(las=1, mar=c(5,5,1,1), mgp=c(2, 0.5, 0), tck=-0.01)
-plot(as.numeric(names(totalNap)), totalNap, type="b", pch=16, xlab="age in days", ylab="nap time (in minutes)")
-plot(as.numeric(names(totalNap)), totalNap, type="b", pch=16, xlab="age in days", ylab="nap time (in minutes)", ylim=1,000,000)
-plot(as.numeric(names(totalNap)), totalNap, type="b", pch=16, xlab="age in days", ylab="nap time (in minutes)", ylim=100000000)
-plot(as.numeric(names(totalNap)), totalNap, type="b", pch=16, xlab="age in days", ylab="nap time (in minutes)", ylim=10000000)
-plot(as.numeric(names(totalNap)), totalNap, type="b", pch=16, xlab="age in days", ylab="nap time (in minutes)", ylim=100000)
-plot(as.numeric(names(totalNap)), totalNap, type="b", pch=16, xlab="age in days", ylab="nap time (in minutes)", ylim=18004)
-plot(as.numeric(names(totalNap)), totalNap, type="b", pch=16, xlab="age in days", ylab="nap time (in minutes)", ylim=18003)
-?ylim
-plot(as.numeric(names(totalNap)), totalNap, type="b", pch=16, xlab="age in days", ylab="nap time (in minutes)", ylim=c(18005)
-plot(as.numeric(names(totalNap)), totalNap, type="b", pch=16, xlab="age in days", ylab="nap time (in minutes)", xlim=c(100000), ylim=c(18005)
-plot(as.numeric(names(totalNap)), totalNap, type="b", pch=16, xlab="age in days", ylab="nap time (in minutes)", ylim=c(18005)
-cor.test(beren4$start_hour, beren4$sleepTime)
-plot(as.numeric(names(totalNap)), totalNap, type="b", pch=16, xlab="age in days", ylab="total nap time (in minutes)", ylim=c(18005)
-cor.test(beren4$start_hour, beren4$sleepTime)
-setwd('~/Desktop/Evolution/Tasks/Task_02')#
-Data <- read.csv('http://jonsmitchell.com/data/beren.csv',stringsAsFactors=F)#
-write.csv(Data, 'rawdata.csv', quote=F)#
-Data#
-length(Data)#
-nrow(Data)#
-ncol(Data)#
-colnames(Data)
-head(Data)
-Data[1,]#
-Data[2,]#
-Data[1:3,]#
-Data[1:3, 4]#
-Data[1:5, 1:3]#
-#Data[257, 1:3]#
-Feeds <- which(Data[,9] == 'bottle')#
-berenMilk <- Data[Feeds,]#
-head(berenMilk)
-Feeds <- which(Data[,'event'] == 'bottle')#
-Feeds <- which(Data$event == 'bottle')
-dayID <- apply(Data, 1, function(x) paste(x[1:3], collapse='-'))#
-dateID <- sapply(dayID, as.Date, format = "%Y-%m-%d" , origin = "2019-04-18")#
-Data$age <- dateID[which(Data$event == 'birth')]#
-head(Data)#
-beren2 <- Data#
-beren3 <- beren2[order(beren2$age) ,]#
-head(beren)#
-head(beren2)#
-head(beren3)#
-write.csv(beren3, 'beren_new.csv', quote=F, row.names=FALSE)
-Feeds <- which(beren3$event == "bottle")#
-avgMilk <- mean (beren3$value[Feeds])#
-head(avgMilk)
-avgFeed <- tapply(beten3$value[Feeds], beren3$age[Feeds], mean)#
-varFeed <- tapply(beren3$value[Feeds], beren3$age[Feeds], var)#
-totalFeed <- tapply(beren3$value[Feeds], beren3$age[Feeds], sum)#
-numFeeds <- tapply(beren3$value[Feeds], beren3$age[Feeds], length)#
-?cor#
-cor(beren3$value[Feeds], beren3$age[Feeds])#
-cor.test(beren3$value[Feeds], beren3$age[Feeds])#
-berenCor <- cor.test(beren3$value[Feeds], beren3$age[Feeds])#
-summary(berenCor)#
-berenANOVA <- aov(beren3$value[Feeds] ~ beren3$caregiver[Feeds])#
-boxplot(beren3$value[Feeds] ~ beren3$caregiver[Feeds], xlab = "who gave the bottle", ylab = "amount of milk consumed (oz)")
-par(las=1, mar=c(5,5,1,1), mgp=c(2, 0.5, 0), tck=-0.01)#
-plot(as.numeric(names(totalFeed)), totalFeed, type="b", pch=16, xlab="age in days", ylab="ounces of milk")
-abline(h=mean(totalFeed), lty=2, col='red')
-par(las=1, mar=c(5,5,1,1), mgp=c(2, 0.5, 0), tck=-0.01)#
-plot(as.numeric(names(totalFeed)), totalFeed, type="b", pch=16, xlab="age in days", ylab="ounces of milk")#
-abline(h=mean(totalFeed), lty=2, col='red')#
-dev.off()
-beren4 <- which(Data[,9] == 'nap')
-Naps <- [beren4,]
-Naps <- Data[beren4,]
-Naps <- (Data[beren4,])
-Naps <- Data [beren4,]
-Naps
-beren4 <- which(Data[,'event'] == 'nap')
-beren4 <- (Data$ecent == 'nap')
-startHour <- (beren4$start_hour)
-beren4
-startHour <- (beren4$start_hour)
-startHour
-startHour <- (beren4$start_hour)
-beren4 <- beren3[Naps,]
-beren4
-setwd('~/Desktop/Evolution/Tasks/Task_02')#
-Data <- read.csv('http://jonsmitchell.com/data/beren.csv',stringsAsFactors=F)#
-write.csv(Data, 'rawdata.csv', quote=F)#
-Data#
-length(Data)#
-nrow(Data)#
-ncol(Data)#
-colnames(Data)
-head(Data)
-Data[1,]#
-Data[2,]#
-Data[1:3,]#
-Data[1:3, 4]#
-Data[1:5, 1:3]#
-#Data[257, 1:3]#
-Feeds <- which(Data[,9] == 'bottle')#
-berenMilk <- Data[Feeds,]#
-head(berenMilk)
-Feeds <- which(Data[,'event'] == 'bottle')#
-Feeds <- which(Data$event == 'bottle')
-dayID <- apply(Data, 1, function(x) paste(x[1:3], collapse='-'))#
-dateID <- sapply(dayID, as.Date, format = "%Y-%m-%d" , origin = "2019-04-18")#
-Data$age <- dateID[which(Data$event == 'birth')]#
-head(Data)#
-beren2 <- Data#
-beren3 <- beren2[order(beren2$age) ,]#
-head(beren)#
-head(beren2)#
-head(beren3)#
-write.csv(beren3, 'beren_new.csv', quote=F, row.names=FALSE)
-Feeds <- which(beren3$event == "bottle")#
-avgMilk <- mean (beren3$value[Feeds])#
-head(avgMilk)
-avgFeed <- tapply(beten3$value[Feeds], beren3$age[Feeds], mean)#
-varFeed <- tapply(beren3$value[Feeds], beren3$age[Feeds], var)#
-totalFeed <- tapply(beren3$value[Feeds], beren3$age[Feeds], sum)#
-numFeeds <- tapply(beren3$value[Feeds], beren3$age[Feeds], length)
-avgFeed <- tapply(beten3$value[Feeds], beren3$age[Feeds], mean)
-avgFeed <- tapply(beren3$value[Feeds], beren3$age[Feeds], mean)#
-varFeed <- tapply(beren3$value[Feeds], beren3$age[Feeds], var)#
-totalFeed <- tapply(beren3$value[Feeds], beren3$age[Feeds], sum)#
-numFeeds <- tapply(beren3$value[Feeds], beren3$age[Feeds], length)
-cor(beren3$value[Feeds], beren3$age[Feeds])#
-cor.test(beren3$value[Feeds], beren3$age[Feeds])#
-berenCor <- cor.test(beren3$value[Feeds], beren3$age[Feeds])#
-summary(berenCor)#
-berenANOVA <- aov(beren3$value[Feeds] ~ beren3$caregiver[Feeds])#
-boxplot(beren3$value[Feeds] ~ beren3$caregiver[Feeds], xlab = "who gave the bottle", ylab = "amount of milk consumed (oz)")
-par(las=1, mar=c(5,5,1,1), mgp=c(2, 0.5, 0), tck=-0.01)#
-plot(as.numeric(names(totalFeed)), totalFeed, type="b", pch=16, xlab="age in days", ylab="ounces of milk")#
-abline(h=mean(totalFeed), lty=2, col='red')#
-pdf("r02b-totalMilkByDay.pdf", height = 4, width = 4)#
-par(las=1, mar=c(5,5,1,1), mgp=c(2, 0.5, 0), tck=-0.01)#
-plot(as.numeric(names(totalFeed)), totalFeed, type="b", pch=16, xlab="age in days", ylab="ounces of milk")#
-abline(h=mean(totalFeed), lty=2, col='red')#
-dev.off()
-beren4 <- beren3[Naps,]
-Naps
-beren4 <- beren3[Naps,]
-beren4 <- beren3[nap,]
-beren4 <-  which(Data[,9]) == 'nap'
-beren4 <-  which(Data[,9]) == 'naps'
-beren4 <-  which(Data[,9]) == 'naps
-beren4 <- beren3[nap,]
-startHour <- (beren4$start_hour)
-startMin <- (beren4$start_minute)
-endHour <- (beren4$end_hour)
-endMin <- (beren4$end_minute)
-startHour
-startMin#
-endHour#
-endMin#
-beren4$sleepTime <- ((endHour - startHour)*60) + (endMin - startMin)#
-beren4#
-totalNap <- tapply(beren4$sleepTime, beren4$age, sum)#
-totalNap
-par(las=1, mar=c(5,5,1,1), mgp=c(2, 0.5, 0), tck=-0.01)
-plot(as.numeric(names(totalNap)), totalNap, type="b", pch=16, xlab="age in days", ylab="total nap time (in minutes)", ylim=c(18005)
-cor.test(beren4$start_hour, beren4$sleepTime)
-setwd('~/Desktop/Evolution/Tasks/Task_02')#
-Data <- read.csv('http://jonsmitchell.com/data/beren.csv',stringsAsFactors=F)#
-write.csv(Data, 'rawdata.csv', quote=F)#
-Data#
-length(Data)#
-nrow(Data)#
-ncol(Data)#
-colnames(Data)
-head(Data)
-Data[1,]#
-Data[2,]#
-Data[1:3,]#
-Data[1:3, 4]#
-Data[1:5, 1:3]#
-#Data[257, 1:3]#
-Feeds <- which(Data[,9] == 'bottle')#
-berenMilk <- Data[Feeds,]#
-head(berenMilk)
-Feeds <- which(Data[,'event'] == 'bottle')#
-Feeds <- which(Data$event == 'bottle')
-dayID <- apply(Data, 1, function(x) paste(x[1:3], collapse='-'))#
-dateID <- sapply(dayID, as.Date, format = "%Y-%m-%d" , origin = "2019-04-18")#
-Data$age <- dateID[which(Data$event == 'birth')]#
-head(Data)#
-beren2 <- Data#
-beren3 <- beren2[order(beren2$age) ,]#
-head(beren)#
-head(beren2)#
-head(beren3)#
-write.csv(beren3, 'beren_new.csv', quote=F, row.names=FALSE)
-Feeds <- which(beren3$event == "bottle")#
-avgMilk <- mean (beren3$value[Feeds])#
-head(avgMilk)
-Naps <- which(Data[, 'event'] == 'nap')
-beren4 <- beren3[Naps,]
-startHour <- (beren4$start_hour)
-startMin <- (beren4$start_minute)
-endHour <- (beren4$end_hour)
-endMin <- (beren4$end_minute)
-startHour
-startMin
-endHour
-endMin
-beren4$sleepTime <- ((endHour - startHour)*60) + (endMin - startMin)
-beren4
-totalNap <- tapply(beren4$sleepTime, beren4$age, sum)
-totalNap
-totalNap <- sum(beren4$sleepTime, beren4$age)
-totalNap
-par(las=1, mar=c(5,5,1,1), mgp=c(2, 0.5, 0), tck=-0.01)
-plot(as.numeric(names(totalNap)), totalNap, type="b", pch=16, xlab="age in days", ylab="total nap time (in minutes)", ylim=c(18005)
-plot(as.numeric(names(totalNap)), totalNap, type="b", pch=16, xlab="age in days", ylab="total nap time (in minutes)"
-cor.test(beren4$start_hour, beren4$sleepTime)
 totalNap <- tapply(beren4$sleepTime[Naps], beren4$age[Naps], sum)
 totalNap
 par(las=1, mar=c(5,5,1,1), mgp=c(2, 0.5, 0), tck=-0.01)
@@ -409,7 +179,6 @@ sleepTime <- ((stopHour - startHour)*60) + (stopMin - startMin)
 sleepTime <- ((endHour - startHour)*60) + (endMin - startMin)
 sleepTime
 totalNap <- tapply(beren4$sleepTime, beren4$age, sum)
-totalNap <- tapply(beren4$sleepTime, beren4$age, sum)
 totalNap <- (beren4$sleepTime + beren4$age)
 totalNap
 par(las=1, mar=c(5,5,1,1), mgp=c(2, 0.5, 0), tck=-0.01)
@@ -472,4 +241,202 @@ totalTime
 startTime
 cor.test(startMin, totalTime)
 cor.test(startHour, totalTime)
+cor.test(startTime, totalTime)
+setwd('~/Desktop/Evolution/Tasks/Task_02')#
+Data <- read.csv('http://jonsmitchell.com/data/beren.csv',stringsAsFactors=F)#
+write.csv(Data, 'rawdata.csv', quote=F)#
+Data#
+length(Data)#
+nrow(Data)#
+ncol(Data)#
+colnames(Data)
+head(Data)
+Data[1,]#
+Data[2,]#
+Data[1:3,]#
+Data[1:3, 4]#
+Data[1:5, 1:3]#
+#Data[257, 1:3]#
+Feeds <- which(Data[,9] == 'bottle')#
+berenMilk <- Data[Feeds,]#
+head(berenMilk)
+Feeds <- which(Data[,'event'] == 'bottle')#
+Feeds <- which(Data$event == 'bottle')
+dayID <- apply(Data, 1, function(x) paste(x[1:3], collapse='-'))#
+dateID <- sapply(dayID, as.Date, format = "%Y-%m-%d" , origin = "2019-04-18")#
+Data$age <- dateID[which(Data$event == 'birth')]#
+head(Data)#
+beren2 <- Data#
+beren3 <- beren2[order(beren2$age) ,]#
+head(beren)#
+head(beren2)#
+head(beren3)#
+write.csv(beren3, 'beren_new.csv', quote=F, row.names=FALSE)
+Feeds <- which(beren3$event == "bottle")#
+avgMilk <- mean (beren3$value[Feeds])#
+head(avgMilk)
+avgFeed <- tapply(beren3$value[Feeds], beren3$age[Feeds], mean)#
+varFeed <- tapply(beren3$value[Feeds], beren3$age[Feeds], var)#
+totalFeed <- tapply(beren3$value[Feeds], beren3$age[Feeds], sum)#
+numFeeds <- tapply(beren3$value[Feeds], beren3$age[Feeds], length)
+cor(beren3$value[Feeds], beren3$age[Feeds])#
+cor.test(beren3$value[Feeds], beren3$age[Feeds])#
+berenCor <- cor.test(beren3$value[Feeds], beren3$age[Feeds])#
+summary(berenCor)#
+berenANOVA <- aov(beren3$value[Feeds] ~ beren3$caregiver[Feeds])#
+boxplot(beren3$value[Feeds] ~ beren3$caregiver[Feeds], xlab = "who gave the bottle", ylab = "amount of milk consumed (oz)")
+par(las=1, mar=c(5,5,1,1), mgp=c(2, 0.5, 0), tck=-0.01)#
+plot(as.numeric(names(totalFeed)), totalFeed, type="b", pch=16, xlab="age in days", ylab="ounces of milk")#
+abline(h=mean(totalFeed), lty=2, col='red')#
+pdf("r02b-totalMilkByDay.pdf", height = 4, width = 4)#
+par(las=1, mar=c(5,5,1,1), mgp=c(2, 0.5, 0), tck=-0.01)#
+plot(as.numeric(names(totalFeed)), totalFeed, type="b", pch=16, xlab="age in days", ylab="ounces of milk")#
+abline(h=mean(totalFeed), lty=2, col='red')#
+dev.off()
+Naps <- which(Data[,9] == 'nap')
+beren4 <- Data[Naps,]
+beren4
+startHour <- (beren4$start_hour)
+startMin <- (beren4$start_minute)
+endHour <- (beren4$end_hour)
+endMin <- (beren4$end_minute)
+sleepTime1 <- (endHour - startHour)*(60)
+sleepTime2 <- (endMin - startMin)
+sleepTime1
+sleepTime2
+totalTime <- tapply(sleepTime1, sleepTime2, sum)
+totalTime
+par(las=1, mar=c(5,5,1,1), mgp=c(2, 0.5, 0), tck=-0.01)
+plot(as.numeric(names(totalTime)), totalTime, type="b", pch=16, xlab="age in days", ylab="nap times in minutes")
+plot(as.numeric(names(totalTime)), totalTime, type="b", pch=16, xlab="age in days", ylab="nap time in minutes")
+startTime
+startTime <- ((startHour)*60) + startMin
+startTime
+cor.test(startTime, totalTime)
+totalDuration <- (totalTime - startTime)
+cor.test(startHour, totalTime)
+cor.test(startTime, totalTime)
+napTime <- [10:4,5,6,7]
+napTime <- c(10:4,5,6,7)
+napTime
+sum(napTime)
+cor.test(startTime, napTime)
+startTime
+sum(startTime)
+napTime <- (totalTime - startTime)
+cor(beren4$value[Naps], beren4$age[Naps])
+cor.test(beren4$value[Naps], beren4$age[Naps])
+cor.test(beren4$start_hour, beren4$totalTime)
+cor.test(beren4$value[Naps], beren4$totalTime[Naps])
+totalTime <- tapply(sleepTime1, sleepTime2, sum)
+totalTime
+cor.test(startTime, beren4$totalTime[Naps])
+cor.test(startTime, totalTime)
+cor(startTime, totalTime)
+sleepTime1
+totalTime
+startTime
+startTime
+startTime <- (startHour) + startMin/60
+startTime
+cor(startTime, totalTime)
+totalNap <- tapply(totalTime, beren4$age, sum)
+sleepTime1 <- (endHour - startHour)*(60) #
+sleepTime2 <- (endMin - startMin)
+sleepTime1#
+sleepTime2
+totalTime <- tapply(sleepTime1, sleepTime2, sum)
+totalTime
+totalNap <- tapply(beren4$totalTime, beren4$age, sum)
+beren4
+beren4 <- beren3[Naps,]
+beren4
+startHour <- (beren4$start_hour)#
+startMin <- (beren4$start_minute)#
+endHour <- (beren4$end_hour)#
+endMin <- (beren4$end_minute)
+startHour#
+startMin#
+endHour#
+endMin
+sleepTime <- ((endHour - startHour)*60) + (endMin - startMin)
+beren4
+sleepTime
+beren4
+beren4$sleepTime <- ((endHour - startHour)*60) + (endMin - startMin)
+sleepTime
+totalTime <- tapply(beren4$sleepTime, beren4$age, sum)
+totalTime
+par(las=1, mar=c(5,5,1,1), mgp=c(2, 0.5, 0), tck=-0.01)
+plot(as.numeric(names(totalTime)), totalTime, type"b", pch=16, xlab="age in days", ylab="nap time in minutes")
+totalTime <- tapply(beren4$sleepTime, beren4$age, sum)
+totalTime
+par(las=1, mar=c(5,5,1,1), mgp=c(2, 0.5, 0), tck=-0.01)
+plot(as.numeric(names(totalTime)), totalTime, type"b", pch=16, xlab="age in days", ylab="nap time in minutes")
+plot(as.numeric(names(totalTime)), totalTime, type="b", pch=16, xlab="age in days", ylab="nap time in minutes")
+startHour <- (beren4$start_hour)#
+startMin <- (beren4$start_minute)#
+endHour <- (beren4$end_hour)#
+endMin <- (beren4$end_minute)
+startHour#
+startMin#
+endHour#
+endMin
+sleepTime1 <- (endHour - startHour) *(60)
+sleepTime2 <- (endMin - startMin)
+sleepTime1#
+sleetTime2
+sleepTime1#
+sleepTime2
+totalTime <- tapply(sleepTime1, sleepTime2, sum)
+totalTime
+sum(totalTime)
+totalNapTime <- tapplu(totalTime, beren3$age)
+totalNapTime <- tapply(totalTime, beren3$age)
+totalNapTime <- tapply(totalTime, beren4$age, sum)
+totalNapTime <- tapply(totalTime, beren4$age[Naps], sum)
+Naps <- which(Data[,'event'] == 'nap')
+Naps
+beren4 <- beren3[Naps,]
+beren4
+dayID <- apply(Data, 1, function(x) paste(x[1:3], collapse='-'))#
+dateID <- sapply(dayID, as.Date, format = "%Y-%m-%d" , origin = "2019-04-18")#
+Data$age <- dateID[which(Data$event == 'birth')]
+startHour <- (beren4$start_hour)#
+startMin <- (beren4$start_minute)#
+endHour <- (beren4$end_hour)#
+endMin <- (beren4$end_minute)
+startHour#
+startMin#
+endHour#
+endMin#
+sleepTime1 <- (endHour - startHour) *(60)#
+sleepTime2 <- (endMin - startMin)#
+sleepTime1#
+sleepTime2
+totalTime <- tapply(sleepTime1, sleepTime2, sum)#
+totalTime
+totalNapTime <- tapply(totalTime, beren4$age[Naps], sum)
+Naps <- which(Data[,9] == 'nap')
+dayID <- apply(Data, 1, function(x) paste(x[1:3], collapse='-'))#
+dateID <- sapply(dayID, as.Date, format = "%Y-%m-%d" , origin = "2019-04-18")#
+Data$age <- dateID[which(Data$event == 'birth')]
+startHour <- (beren4$start_hour)#
+startMin <- (beren4$start_minute)#
+endHour <- (beren4$end_hour)#
+endMin <- (beren4$end_minute)#
+startHour#
+startMin#
+endHour#
+endMin#
+sleepTime1 <- (endHour - startHour) *(60)#
+sleepTime2 <- (endMin - startMin)#
+sleepTime1#
+sleepTime2#
+totalTime <- tapply(sleepTime1, sleepTime2, sum)#
+totalTime
+par(las=1, mar=c(5,5,1,1), mgp=c(2, 0.5, 0), tck=-0.01)#
+plot(as.numeric(names(totalTime)), totalTime, type="b", pch=16, xlab="age in days", ylab="nap time in minutes")
+startTime <- (startHour*60) + startMin
+startTime
 cor.test(startTime, totalTime)

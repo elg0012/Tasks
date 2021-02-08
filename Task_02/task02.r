@@ -90,6 +90,7 @@ startTime
 cor.test(startTime, totalTime)
 #The nature of the relationship is negative between the two. 
 Wet <- which(Data[,9] == 'wet')
+Feeds
 Wet 
 Naps
 totalNaps <- sum(Naps)

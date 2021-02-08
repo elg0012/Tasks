@@ -65,12 +65,12 @@ dev.off()
 source("http://jonsmitchell.com/code/plotFxn02b.R")
 #The graph we made using the code given to us in this assignment is very difficult to read and understand because there is very little information obtainable from the graph. The one on eCampus is easier to understand because it shows that as time passes throughout the day and over several days, the amount of total milk increases. This is way easier to understand even without knowing much about these types of graphs. The graph we created does not show anything regarding the time passed throughout the day. This makes it very hard to correlate anything. This causes the data to be in one place rather than spread out to where we may observe it. Hypothesis 3 from above was the one tested. 
 unique(beren3$event)
-#The hypothesis I would like to test is that as Beren has gotten older, he uses the bathroom more frequently. 
+#The hypothesis I would like to test is Beren uses the urinates more than he naps. I will test this by looking at the data of "nap" and "wet."
 Naps <- which(Data[,9] == 'nap')
 beren4 <- beren3[Naps,]
 beren4
 startHour <- (beren4$start_hour)
-startMin <- (beren4$start_minute)
+startMin <- (beren4$start_minute
 endHour <- (beren4$end_hour)
 endMin <- (beren4$end_minute)
 startHour
@@ -89,3 +89,9 @@ startTime <- (startHour*60) + startMin
 startTime
 cor.test(startTime, totalTime)
 #The nature of the relationship is negative between the two. 
+Wet <- which(Data[,9] == 'wet')
+Wet 
+Feeds
+totalFeeds <- sum(Feeds)
+totalWets <- sum(Wet)
+plot(totalFeeds,totalWets)

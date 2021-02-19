@@ -1,356 +1,477 @@
-trueMean1 <- 5
-trueSD1 <- 5#
-population1 <- rnorm(1e6, trueMean1, true SD1)
-trueSD1 <- 5
-population1 <- rnorm(1e6, trueMean1, trueSD1)
-trueMean2 <- 4#
-trueSD2 <- 5#
-population2 <- rnorm(1e6, trueMean2, trueSD2)
-Size <- 50 #
-Sample1 <- sample(population1, Size)#
-Sample2 <- sample(population2, Size)
-Sample1
-Sample2
-boxplot(Sample1, Sample2)
-source("http://jonsmitchell.com/code/simFxn04.R")
-MatGrandma <- makeFounder("grandma_mom")#
-MatGrandpa <- makeFounder("grandpa_mom")#
-PatGrandpa <- makeFounder("grandma_da")#
-PatGrandpa <- makeFounder("grandpa_da")
-head(MatGrandma)#
-head(MatGrandpa)#
-head(PatGrandpa)#
-head(PatGrandpa)
-Alan <- makeBaby(PatGrandma, PatGrandpa)#
-Brenda <- makeBaby(MatGrandma, MatGrandpa)
-PatGrandma <- makeFounder("grandma_da")
-head(PatGrandma)
-Alan <- makeBaby(PatGrandma, PatGrandpa)#
-Brenda <- makeBaby(MatGrandma, MatGrandpa)
-Focus <- makeBaby(Brenda, Alan)
-ToMom <- length (grep("mom", Focuse))/length(Focus)
-ToMom <- length (grep("mom", Focus))/length(Focus)
-head(ToMom)
-ToMomMom <- length(grep("grandma_mom", Focus))/length(Focus)#
-ToMomDad <- length(grep("grandpa_mom", Focus))/length(Focus)
-head(ToMomMom)#
-head(ToMomDad)
-trueMean1 <- 5#
-trueSD1 <- 5#
-population1 <- rnorm(1e6, trueMean1, trueSD1)#
-#
-trueMean2 <- 4#
-trueSD2 <- 5#
-population2 <- rnorm(1e6, trueMean2, trueSD2)#
-#
-Size <- 50 #
-Sample1 <- sample(population1, Size)#
-Sample2 <- sample(population2, Size)#
-#
-Sample1#
-Sample2#
-#
-#The populations are different in that sample 1 has 49 objetcs, and sample 2 has 46 objects. #
-boxplot(Sample1, Sample2)#
-source("http://jonsmitchell.com/code/simFxn04.R")#
-#
-MatGrandma <- makeFounder("grandma_mom")#
-MatGrandpa <- makeFounder("grandpa_mom")#
-PatGrandma <- makeFounder("grandma_da")#
-PatGrandpa <- makeFounder("grandpa_da")#
-#
-head(MatGrandma)#
-head(MatGrandpa)#
-head(PatGrandma)#
-head(PatGrandpa)#
-#
-Alan <- makeBaby(PatGrandma, PatGrandpa)#
-Brenda <- makeBaby(MatGrandma, MatGrandpa)#
-#
-Focus <- makeBaby(Brenda, Alan)#
-#
-#The number of the ToMom obhect should be 50% or 0.50. #
-#
-ToMom <- length (grep("mom", Focus))/length(Focus)#
-head(ToMom)#
-#These numbers should be 25% 05 0.25. #
-#
-ToMomMom <- length(grep("grandma_mom", Focus))/length(Focus)#
-ToMomDad <- length(grep("grandpa_mom", Focus))/length(Focus)#
-head(ToMomMom)#
-head(ToMomDad)
-ToDadMom <- length(grep("grandma_da", Focus))/length(Focus)#
-ToDadDad <- length(grep("grandma_da", Focus))/length(Focus)
-head(ToDadMom)#
-head(ToDadDad)
-Sibling_01 <- makeBaby(Brenda, Alan)
-ToSib <- length(interest(Focus, Sibling_01))/length(Focus)
-ToSib <- length(intersect(Focus, Sibling_01))/length(Focus)
-head(ToSib)
-ManySiblings <- replicate(1e3, length(intersect(Focus, makeBaby(Brenda, Alan)))/length(Focus))
-head(makeSiblings)
-head(ManySiblings)
-quantile(ManySiblings)#
-mean(ManySiblings)
-plot(density(ManySiblings), main="", xlab="proportion shared genes")
-HWE <- function(p) {
-aa <- p^2#
-	ab <- 2*p*(1-p)#
-	bb <- (1-p)^2
-return(c(aa=aa, ab=ab, bb=bb))#
-	}#
-	HWE(0.5)
-plot(1, 1, type="n", xlim=c(0,1), ylim=c(0,1), xlab="freq. allele a", ylab="geno. freq")
-p <- seq(from = 0, to = 1, by = 0.01)#
-GenoFreq <- t(sapply(p, HWE))
-lines(p, GenoFreq[,"aa"], lwd=2, col="red")
-plot(1, 1, type="n", xlim=c(0,1), ylim=c(0,1), xlab="freq. allele a", ylab="geno. freq")
-lines(p, GenoFreq[,"aa"], lwd=2, col="red")
-plot(1, 1, type="n", xlim=c(0,1), ylim=c(0,1), xlab="freq. allele a", ylab="geno. freq", lines(p, GenoFreq[,"aa"], lwd=2, col="red")
-p <- seq(from = 0, to = 1, by = 0.01)#
-GenoFreq <- t(sapply(p, HWE))
-lines(p, GenoFreq[,"aa"], lwd=2, col="red")
-p <- seq(from = 0, to = 1, by = 0.01)#
-GenoFreq <- t(sapply(p, HWE))#
-lines(p, GenoFreq[,"aa"], lwd=2, col="red")#
-lines(p, GenoFreq[,"ab"], lwd=2, col="purple")#
-legend("top", legend=c("aa","ab","bb"), col=c("red","purple","blue"), lty=1, lwd=2, bty="n")
-Pop <- simPop(500)
-points(Pop[,"freqa"], Pop[,"Genotypes.aa"]/5--, pch=21, bg="red")
-points(Pop[,"freqa"], Pop[,"Genotypes.aa"]/500, pch=21, bg="red")
-Pop <- simPop(50)#
-points(Pop[,"freqa"], Pop[,"Genotypes.aa"]/50, pch=22, bg="red")
-lines(p, GenoFreq[,"aa"], lwd=2, col="red")
-plot(lines)
-plot.new(lines)
-lines(p, GenoFreq[,"aa"], lwd=2, col="red")
-plot(GenoFreq, lines, type="n",  xlim=c(0,1), ylim=c(0,1), xlab="freq. allele a", ylab="geno. freq")
-plot(GenoFreq, lines, type="n",  xlim=c(0,1), ylim=c(0,1), xlab="freq. allele a", ylab="geno. freq")
-plot(1, 1, type="n", xlim=c(0,1), ylim=c(0,1), xlab="freq. allele a", ylab="geno. freq")#
-p <- seq(from = 0, to = 1, by = 0.01)#
-GenoFreq <- t(sapply(p, HWE))
-HWE <- function(p) {#
-	aa <- p^2#
-	ab <- 2*p*(1-p)#
-	bb <- (1-p)^2#
-	return(c(aa=aa, ab=ab, bb=bb))#
+source("http://jonsmitchell.com/code/fxn05.R")
+Pop <- simPop(Popsize = 50, nGenerations = 100, initial_p = 0.5, h = 1, s = 0)
+plot(1:nrow(Pop1), Pop1[,1], ylim=c(0,1), type = "1", xlab="generation", ylab="allele freq.", lwd=2)
+Pop1 <- simPop(Popsize = 50, nGenerations = 100, initial_p = 0.5, h = 1, s = 0)
+plot(1:nrow(Pop1), Pop1[,1], ylim=c(0,1), type = "1", xlab="generation", ylab="allele freq.", lwd=2)
+lines(1:nrow(Pop1), Pop1[,2], lwd=2, col='red')
+plot(1:nrow(Pop1), Pop1[,1], ylim=c(0,1), type = "1", xlab="generation", ylab="allele freq.", lwd=2)#
+lines(1:nrow(Pop1), Pop1[,2], lwd=2, col='red')#
+legend("topleft", legend = c("a", "b"), col = c("black", "red"), lwd = 2, bty="n")
+setwd('~/Desktop/Evolution/Tasks/Task_04')#
+source("http://jonsmitchell.com/code/fxn05.R")#
+Pop1 <- simPop(Popsize = 50, nGenerations = 100, initial_p = 0.5, h = 1, s = 0)#
+plot(1:nrow(Pop1), Pop1[,1], ylim=c(0,1), type = "1", xlab="generation", ylab="allele freq.", lwd=2)#
+lines(1:nrow(Pop1), Pop1[,2], lwd=2, col='red')#
+legend("topleft", legend = c("a", "b"), col = c("black", "red"), lwd = 2, bty="n")
+setwd('~/Desktop/Evolution/Tasks/Task_04')#
+source("http://jonsmitchell.com/code/fxn05.R")#
+Pop1 <- simPop(Popsize = 50, nGenerations = 100, initial_p = 0.5, h = 1, s = 0)#
+plot(1:nrow(Pop1), Pop1[,1], ylim=c(0,1), type = "l", xlab="generation", ylab="allele freq.", lwd=2)#
+lines(1:nrow(Pop1), Pop1[,2], lwd=2, col='red')#
+legend("topleft", legend = c("a", "b"), col = c("black", "red"), lwd = 2, bty="n")
+plotFit(nruns = 10, n = 5, negens = 100, init_p = 0.5, h=1, s=0)
+plotFit(nruns = 10, n = 5, ngens = 100, init_p = 0.5, h=1, s=0)
+Expectation <- c(10, 10, 10 10)
+Expectation <- c(10, 10, 10 10)
+Expectation <- c(10, 10, 10, 10)
+Observed <- c(15, 15, 5, 5)
+Chisq <- sum(((Expectation - Observed)^2/Expectation))
+Chisq
+barplot(rbind(Expectation, Observed), beside=T, main=bquote(chi^2 ~ "=" ~.(Chisq)), legend.text=c("expected", "observed"))
+Observed <- (5, 0, 0, 35)#
+Observed <- (2, 3, 10, 30)#
+Observed <- (10, 10, 10, 10)#
+Observed <- (20, 20, 0, 0)#
+Observed <- c(40, 0, 0, 0)
+Observed <- (5, 0, 0, 35)
+Observed <- c(5, 0, 0, 35)#
+Observed <- c(2, 3, 10, 30)#
+Observed <- c(10, 10, 10, 10)#
+Observed <- c(20, 20, 0, 0)#
+Observed <- c(40, 0, 0, 0)
+Observed <- c(5, 0, 0, 35)
+Chisq <- sum(((Expectation - Observed)^2/Expectation))
+Chisq
+Observed <- c(2, 3, 10, 30)
+Chisq <- sum(((Expectation - Observed)^2/Expectation))#
+Chisq
+Observed <- c(10, 10, 10, 10)
+Chisq <- sum(((Expectation - Observed)^2/Expectation))#
+Chisq
+Observed <- c(20, 20, 0, 0)
+Chisq <- sum(((Expectation - Observed)^2/Expectation))#
+Chisq
+Observed <- c(40, 0, 0, 0)
+Chisq <- sum(((Expectation - Observed)^2/Expectation))#
+Chisq
+setwd("~/Desktop/Evolution/Tasks/Task_04")#
+source("http://jonsmitchell.com/code/fxn05.R")#
+results <- read.csv("http://jonsmitchell.com/data/biol112labresults.csv", stringAsFactors=F)
+setwd("~/Desktop/Evolution/Tasks/Task_04")
+source("http://jonsmitchell.com/code/fxn05.R")
+results <- read.csv("http://jonsmitchell.com/data/biol112labresults.csv")
+results
+length(results)
+results <- read.csv("http://jonsmitchell.com/data/biol112labresults.csv", stringsAsFactors=F)
+results
+length(results)
+results#
+length(results)#
+nrow(results)#
+ncol(results)#
+colnames(results)#
+head(results)
+counts <- results[,c("yellow", "red", "green", "blue", "black", "tan")]#
+backgrounds <- c("White", "Red", "Yello", "Green", "Blue", "Black")
+backgroundCol <- c("white", "#d53e4f", "#fee08b", "#abdda4", "#3288bd", "black")
+calcChi(counts[1,])
+Chisqs <- apply(counts, 1, calcChi)
+plotChis(counts)
+plotChis(counts)
+Avg <- mean(Chisqs)
+Avg
+backgroundAvgs <- tapply(Chisqs, results[,3], mean)
+backgroundAvgs
+propSig <- length(which(Chisq > 11.70))/length(Chisqs)#
+percSig <- rounds(100*propSig)
+propSig <- length(which(Chisq > 11.70))/length(Chisqs)#
+percSig <- round(100*propSig)
+propSig#
+percSig
+par(las=1, mar=c(4, 4, 1, 1), mgp=c(2,0.5, 0), tck=-0.01, cex.axis=1)
+hist(Chisqs, main="", xlab="chi-squared values", ylab="frequency")
+par(las=1, mar=c(4, 4, 1, 1), mgp=c(2, 0.5, 0), tck=-0.01, cex.yaxt="n")
+par(las=1, mar=c(4, 4, 1, 1), mgp=c(2, 0.5, 0), tck=-0.01, cex.axis="n")
+par(las=1, mar=c(4, 4, 1, 1), mgp=c(2, 0.5, 0), tck=-0.01, cex.axis=1)
+plot(1, 1, xlim=c(0, 400), ylim=c(1, 8.5), xlab="", ylab="", type="n", yaxt="n")
+axis(2, at = 1:length(backgrounds), labels=backgrounds)
+par(las=1, mar=c(4, 4, 1, 1), mgp=c(2, 0.5, 0), tck=-0.01, cex.axis=1)#
+plot(1, 1, xlim=c(0, 400), ylim=c(1, 8.5), xlab="", ylab="", type="n", yaxt="n")#
+axis(2, at = 1:length(backgrounds), labels=backgrounds)#
+mtext(side=1, expression(chi^2), cex=1.75, line=2.5)#
+counter <- 1#
+for (i in backgrounds) {#
+	Data <- Chisqs[which(results[,3] == i)]#
+	addHist(Y=counter, Dat=Data, Color=backgroundCol[counter])#
+	counter <- counter +1#
 }#
-HWE(0.5)
-plot(1, 1, type="n", xlim=c(0,1), ylim=c(0,1), xlab="freq. allele a", ylab="geno. freq")
-p <- seq(from = 0, to = 1, by = 0.01)
-GenoFreq <- t(sapply(p, HWE))
-lines(p, GenoFreq[,"aa"], lwd=2, col="red")
-plot.new(lines(p, GenoFreq[,"aa"], lwd=2, col="red"))
-lines(p, GenoFreq[,"aa"], lwd=2, col="red")
-install.packages('learnPopGen')#
-library('learnPopGen')
-plot(1, 1, type="n", xlim=c(0,1), ylim=c(0,1), xlab="freq. allele a", ylab="geno. freq")#
-p <- seq(from = 0, to = 1, by = 0.01)#
-GenoFreq <- t(sapply(p, HWE))#
-lines(p, GenoFreq[,"aa"], lwd=2, col="red")#
-lines(p, GenoFreq[,"ab"], lwd=2, col="purple")#
-legend("top", legend=c("aa","ab","bb"), col=c("red","purple","blue"), lty=1, lwd=2, bty="n")#
-Pop <- simPop(500)#
-points(Pop[,"freqa"], Pop[,"Genotypes.aa"]/500, pch=21, bg="red")#
-Pop <- simPop(50)#
-points(Pop[,"freqa"], Pop[,"Genotypes.aa"]/50, pch=22, bg="red")
-plot(1, 1, type="n", xlim=c(0,1), ylim=c(0,1), xlab="freq. allele a", ylab="geno. freq")#
-p <- seq(from = 0, to = 1, by = 0.01)#
-GenoFreq <- t(sapply(p, HWE))#
-lines(p, GenoFreq[,"aa"], lwd=2, col="red")#
-##
-lines(p, GenoFreq[,"ab"], lwd=2, col="purple")#
-lines(p, GenoFreq[,"bb"], lwd=2, col="blue")#
-legend("top", legend=c("aa","ab","bb"), col=c("red","purple","blue"), lty=1, lwd=2, bty="n")#
-Pop <- simPop(500)#
-points(Pop[,"freqa"], Pop[,"Genotypes.aa"]/500, pch=21, bg="red")#
-Pop <- simPop(50)#
-points(Pop[,"freqa"], Pop[,"Genotypes.aa"]/50, pch=22, bg="red")
-plot(1, 1, type="n", xlim=c(0,1), ylim=c(0,1), xlab="freq. allele a", ylab="geno. freq")#
-p <- seq(from = 0, to = 1, by = 0.01)#
-GenoFreq <- t(sapply(p, HWE))#
-lines(p, GenoFreq[,"aa"], lwd=2, col="red")#
-#This plot makes sense to me and is easy to understand based on things we have covered in class. The frequency of aa individuals increases as the frequency of the a allele increases within the population. The aa allele decreases as a decreases. Neither time nor geographic space are shown on this plot, and the units on the graph are represented as decimals or percentages. #
-lines(p, GenoFreq[,"ab"], lwd=2, col="purple")#
-lines(p, GenoFreq[,"bb"], lwd=2, col="blue")#
-legend("top", legend=c("aa","ab","bb"), col=c("red","purple","blue"), lty=1, lwd=2, bty="n")#
-Pop <- simPop(500)#
-points(Pop[,"freqa"], Pop[,"Genotypes.aa"]/500, pch=21, bg="red")#
-Pop <- simPop(50)#
-points(Pop[,"freqa"], Pop[,"Genotypes.aa"]/50, pch=22, bg="red")
-Pop <- simPop(50)#
-points(Pop[,"freqa"], Pop[,"Genotypes.aa"]/50, pch=22, bg="red")
-plot(1, 1, type="n", xlim=c(0,1), ylim=c(0,1), xlab="freq. allele a", ylab="geno. freq")#
-p <- seq(from = 0, to = 1, by = 0.01)#
-GenoFreq <- t(sapply(p, HWE))#
-lines(p, GenoFreq[,"aa"], lwd=2, col="red")#
-#This plot makes sense to me and is easy to understand based on things we have covered in class. The frequency of aa individuals increases as the frequency of the a allele increases within the population. The aa allele decreases as a decreases. Neither time nor geographic space are shown on this plot, and the units on the graph are represented as decimals or percentages. #
-lines(p, GenoFreq[,"ab"], lwd=2, col="purple")#
-lines(p, GenoFreq[,"bb"], lwd=2, col="blue")#
-legend("top", legend=c("aa","ab","bb"), col=c("red","purple","blue"), lty=1, lwd=2, bty="n")#
-Pop <- simPop(500)#
-points(Pop[,"freqa"], Pop[,"Genotypes.aa"]/500, pch=21, bg="red")
-plot(1, 1, type="n", xlim=c(0,1), ylim=c(0,1), xlab="freq. allele a", ylab="geno. freq")#
-p <- seq(from = 0, to = 1, by = 0.01)#
-GenoFreq <- t(sapply(p, HWE))#
-lines(p, GenoFreq[,"aa"], lwd=2, col="red")#
-#This plot makes sense to me and is easy to understand based on things we have covered in class. The frequency of aa individuals increases as the frequency of the a allele increases within the population. The aa allele decreases as a decreases. Neither time nor geographic space are shown on this plot, and the units on the graph are represented as decimals or percentages. #
-lines(p, GenoFreq[,"ab"], lwd=2, col="purple")#
-lines(p, GenoFreq[,"bb"], lwd=2, col="blue")#
-legend("top", legend=c("aa","ab","bb"), col=c("red","purple","blue"), lty=1, lwd=2, bty="n")#
-Pop <- simPop(500)#
-points(Pop[,"freqa"], Pop[,"Genotypes.aa"]/500, pch=21, bg="red")#
-#Yes. The frequency of the aa genotype in this population matches the expectation from Hardy-Weinberg. #
-##
-Pop <- simPop(50)#
-points(Pop[,"freqa"], Pop[,"Genotypes.aa"]/50, pch=22, bg="red")
-install.packages('learnPopGen')#
-library('learnPopGen')
-x <- genetic.drift(Ne=5, nrep=5, pause=0.001)
-Line$coef#
-plot(Samples, tExt)#
-abline(Line)#
-Line2 <- lm(tExt~Samples +0)#
-install.packages('lmtest')#
-install.packages('sandwich')#
-summary(Line)#
-bptest(Line)#
-bptest(Line2)#
-coeftest(Line, vcov = vcovHC(Line))#
-install.packages('robustbase')#
-Linerob <- lmrob(tExt~Samples)#
-summary(Linerob)#
-plot(Samples, tExt)#
-abline(Line)#
-abline(Linerob)
-install.packages('learnPopGen')#
-library('learnPopGen')#
-x <- genetic.drift(Ne=5, nrep=5, pause=0.001)#
-PopSizes <- 5:50#
-Samples <- rep(PopSizes, 5)#
-Samples#
-tExt <- sapply(Samples, function(x) nrow(simPop(x, 500)))#
-tExt#
-Line <- lm(tExt ~Samples)#
-Line#
-summary(Line)
-Line$coef#
-plot(Samples, tExt)#
-abline(Line)#
-Line2 <- lm(tExt~Samples +0)#
-install.packages('lmtest')#
-install.packages('sandwich')#
-summary(Line)#
-bptest(Line)#
-bptest(Line2)
-tExt
-tExt
-Line <- lm(tExt ~Samples)#
-Line
-summary(Line)
-Line$coef
-plot(Samples, tExt)#
-abline(Line)
-Line2 <- lm(tExt~Samples +0)#
-install.packages('lmtest')#
-install.packages('sandwich')
-summary(Line)#
-bptest(Line)#
-bptest(Line2)
-summary(Line)
-summary(Line)
-bptest(Line)
-x <- genetic.drift(Ne=200, nrep=5, pause=0.01)#
-PopSizes <- 5:50#
-Samples <- rep(PopSizes, 5)#
-Samples#
-tExt <- sapply(Samples, function(x) nrow(simPop(x, 500)))#
-tExt#
-Line <- lm(tExt ~Samples)#
-Line#
-summary(Line)#
+abline(v=11.70, lty=2, lws=2, col='black')
+par(las=1, mar=c(4, 4, 1, 1), mgp=c(2, 0.5, 0), tck=-0.01, cex.axis=1)#
+plot(1, 1, xlim=c(0, 400), ylim=c(1, 8.5), xlab="", ylab="", type="n", yaxt="n")#
+axis(2, at = 1:length(backgrounds), labels=backgrounds)#
+mtext(side=1, expression(chi^2), cex=1.75, line=2.5)#
+counter <- 1#
+for (i in backgrounds) {#
+	Data <- Chisqs[which(results[,3] == i)]#
+	addHist(Y=counter, Dat=Data, Color=backgroundCol[counter])#
+	counter <- counter + 1#
+}#
+abline(v=11.70, lty=2, lwd=2, col='black')
+counter <- 1#
+for (i in backgrounds) {#
+	Data <- Chisqs[which(results[,3] == i)]#
+	addHist(Y=counter, Dat=Data, Color=backgroundCol[counter])#
+	counter <- counter + 1#
+}#
+abline(v=11.70, lty=2, lwd=2, col='black')
+par(las=1, mar=c(4, 4, 1, 1), mgp=c(2, 0.5, 0), tck=-0.01, cex.axis=1)#
+plot(1, 1, xlim=c(0, 400), ylim=c(1, 8.5), xlab="", ylab="", type="n", yaxt="n")#
+axis(2, at = 1:length(backgrounds), labels=backgrounds)#
+mtext(side=1, expression(chi^2), cex=1.75, line=2.5)#
+counter <- 1#
+for (i in backgrounds) {#
+	Data <- Chisqs[which(results[,3] == i)]#
+	addHist(Y=counter, Dat=Data, Color=backgroundCol[counter])#
+	counter <- counter + 1#
+}#
+abline(v=11.70, lty=2, lwd=2, col='black')
+par(las=1, mar=c(4, 4, 1, 1), mgp=c(2, 0.5, 0), tck=-0.01, cex.axis=1)#
+plot(1, 1, xlim=c(0, 400), ylim=c(1, 8.5), xlab="", ylab="", type="n", yaxt="n")#
+axis(2, at = 1:length(backgrounds), labels=backgrounds)#
+mtext(side=1, expression(chi^2), cex=1.75, line=2.5)#
+counter <- 1#
+for (i in backgrounds) {#
+	Data <- Chisqs[which(results[,3] == i)]#
+	addHist(Y=counter, Dat=Data, Color=backgroundCol[counter])#
+	counter <- counter + 1#
+}#
+abline(v=11.70, lty=2, lwd=2, col='black')
+Simulation <- simDraws(10000)
+Simulation <- simDraws(10000)#
+addHist(Y=7, Dat=Simulation, Color="lightgray")#
+mtext(side=2, at=7, line=0, "simulated")
+Simulation <- simDraws(10000)
+addHist(Y=7, Dat=Simulation, Color="lightgray")
+par(las=1, mar=c(4, 4, 1, 1), mgp=c(2, 0.5, 0), tck=-0.01, cex.axis=1)#
+plot(1, 1, xlim=c(0, 400), ylim=c(1, 8.5), xlab="", ylab="", type="n", yaxt="n")#
+axis(2, at = 1:length(backgrounds), labels=backgrounds)#
+mtext(side=1, expression(chi^2), cex=1.75, line=2.5)#
+counter <- 1#
+for (i in backgrounds) {#
+	Data <- Chisqs[which(results[,3] == i)]#
+	addHist(Y=counter, Dat=Data, Color=backgroundCol[counter])#
+	counter <- counter + 1#
+}#
+abline(v=11.70, lty=2, lwd=2, col='black')#
+#The backgrounds (paper) where fewer toothpicks could blend well had the smallest distribution to the right.#
+Simulation <- simDraws(10000)#
+addHist(Y=7, Dat=Simulation, Color="lightgray")#
+mtext(side=2, at=7, line=0, "simulated")
+par(las=1, mar=c(4, 4, 1, 1), mgp=c(2, 0.5, 0), tck=-0.01, cex.axis=1)#
+plot(1, 1, xlim=c(0, 400), ylim=c(1, 8.5), xlab="", ylab="", type="n", yaxt="n")#
+axis(2, at = 1:length(backgrounds), labels=backgrounds)#
+mtext(side=1, expression(chi^2), cex=1.75, line=2.5)#
+counter <- 1#
+for (i in backgrounds) {#
+	Data <- Chisqs[which(results[,3] == i)]#
+	addHist(Y=counter, Dat=Data, Color=backgroundCol[counter])#
+	counter <- counter + 1#
+}#
+abline(v=11.70, lty=2, lwd=2, col='black')#
+#The backgrounds (paper) where fewer toothpicks could blend well had the smallest distribution to the right.#
+Simulation <- simDraws(10000)#
+addHist(Y=7, Dat=Simulation, Color="lightgray")#
+mtext(side=2, at=7, line=0, "simulated")#
+abline(v=11.70, lty=2, lwd=2)
+Fit <- c(1, 1, 1, 1, 1, 1)
+Fit <- c(1, 1, 1, 1, 1, 1)#
+names(Fit) <- 1:6#
+Simulation2 <- simDraws(1e4, w=Fit)#
+addHist(Y=8, Dat=Simulation2, Color=rgb(0,0,0,0.25))
+par(las=1, mar=c(4, 4, 1, 1), mgp=c(2, 0.5, 0), tck=-0.01, cex.axis=1)#
+plot(1, 1, xlim=c(0, 400), ylim=c(1, 8.5), xlab="", ylab="", type="n", yaxt="n")#
+axis(2, at = 1:length(backgrounds), labels=backgrounds)#
+mtext(side=1, expression(chi^2), cex=1.75, line=2.5)#
+counter <- 1#
+for (i in backgrounds) {#
+	Data <- Chisqs[which(results[,3] == i)]#
+	addHist(Y=counter, Dat=Data, Color=backgroundCol[counter])#
+	counter <- counter + 1#
+}#
+abline(v=11.70, lty=2, lwd=2, col='black')#
+#The backgrounds (paper) where fewer toothpicks could blend well had the smallest distribution to the right.#
+Simulation <- simDraws(10000)#
+addHist(Y=7, Dat=Simulation, Color="lightgray")#
+mtext(side=2, at=7, line=0, "simulated")#
+abline(v=11.70, lty=2, lwd=2)#
+Fit <- c(1, 1, 1, 1, 1, 1)#
+names(Fit) <- 1:6#
+Simulation2 <- simDraws(1e4, w=Fit)#
+addHist(Y=8, Dat=Simulation2, Color=rgb(0,0,0,0.25))
+par(las=1, mar=c(4, 4, 1, 1), mgp=c(2, 0.5, 0), tck=-0.01, cex.axis=1)#
+plot(1, 1, xlim=c(0, 400), ylim=c(1, 8.5), xlab="", ylab="", type="n", yaxt="n")#
+axis(2, at = 1:length(backgrounds), labels=backgrounds)#
+mtext(side=1, expression(chi^2), cex=1.75, line=2.5)#
+counter <- 1#
+for (i in backgrounds) {#
+	Data <- Chisqs[which(results[,3] == i)]#
+	addHist(Y=counter, Dat=Data, Color=backgroundCol[counter])#
+	counter <- counter + 1#
+}#
+abline(v=11.70, lty=2, lwd=2, col='black')#
+#The backgrounds (paper) where fewer toothpicks could blend well had the smallest distribution to the right.#
+Simulation <- simDraws(10000)#
+addHist(Y=7, Dat=Simulation, Color="lightgray")#
+mtext(side=2, at=7, line=0, "simulated")#
+abline(v=11.70, lty=2, lwd=2)#
+Fit <- c(1, 1, 1, 1, 1, 1)#
+names(Fit) <- 1:6#
+Simulation2 <- simDraws(1e4, w=Fit)#
+addHist(Y=8, Dat=Simulation2, Color=rgb(0,0,0,0.25))#
+Fit <- c(0.1, 1, 1, 1, 1, 1)#
+names(Fit) <- 1:6#
+Simulation3 <- simDraws(1e4, w=Fit)#
+addHist(Y=8, Dat=Simulation5, Color=rgb(0,0,0,0.25))#
+Fit <- c(0.5, 0.6, 0.7, 1, 1, 1)#
+names(Fit) <- 1:6#
+Simulation4 <- simDraws(1e4, w=Fit)#
+addHist(Y=8, Dat=Simulation4, Color=rgb(0,0,0,0.25))
+par(las=1, mar=c(4, 4, 1, 1), mgp=c(2, 0.5, 0), tck=-0.01, cex.axis=1)#
+plot(1, 1, xlim=c(0, 400), ylim=c(1, 8.5), xlab="", ylab="", type="n", yaxt="n")#
+axis(2, at = 1:length(backgrounds), labels=backgrounds)#
+mtext(side=1, expression(chi^2), cex=1.75, line=2.5)#
+counter <- 1#
+for (i in backgrounds) {#
+	Data <- Chisqs[which(results[,3] == i)]#
+	addHist(Y=counter, Dat=Data, Color=backgroundCol[counter])#
+	counter <- counter + 1#
+}#
+abline(v=11.70, lty=2, lwd=2, col='black')#
+#The backgrounds (paper) where fewer toothpicks could blend well had the smallest distribution to the right.#
+Simulation <- simDraws(10000)#
+addHist(Y=7, Dat=Simulation, Color="lightgray")#
+mtext(side=2, at=7, line=0, "simulated")#
+abline(v=11.70, lty=2, lwd=2)#
+Fit <- c(1, 1, 1, 1, 1, 1)#
+names(Fit) <- 1:6#
+Simulation2 <- simDraws(1e4, w=Fit)#
+addHist(Y=8, Dat=Simulation2, Color=rgb(0,0,0,0.25))#
+Fit <- c(0.1, 1, 1, 1, 1, 1)#
+names(Fit) <- 1:6#
+Simulation3 <- simDraws(1e4, w=Fit)#
+addHist(Y=8, Dat=Simulation5, Color=rgb(0,0,0,0.25))#
+Fit <- c(0.5, 0.6, 0.7, 1, 1, 1)#
+names(Fit) <- 1:6#
+Simulation4 <- simDraws(1e4, w=Fit)#
+addHist(Y=8, Dat=Simulation4, Color=rgb(0,0,0,0.25))#
+Fit <- c(0.1, 0.2, 0.3, 0.4, 0.5, 1)#
+names(Fit) <- 1:6#
+Simulation5 <- simDraws(1e4, w=Fit)#
+addHist(Y=8, Dat=Simulation5, Color=rgb(0,0,0,0.25))#
+mtext(side=2, at=8, line=0, "sel.sim.")
+Simulation7 <- c(Simulation2, Simulation3, Simulation4, Simulation5, Simulation6)#
+addHist(Y=8, Dat=Simulation7, Color=rgb(0,0,1,0.25))
+par(las=1, mar=c(4, 4, 1, 1), mgp=c(2, 0.5, 0), tck=-0.01, cex.axis=1)#
+plot(1, 1, xlim=c(0, 400), ylim=c(1, 8.5), xlab="", ylab="", type="n", yaxt="n")#
+axis(2, at = 1:length(backgrounds), labels=backgrounds)#
+mtext(side=1, expression(chi^2), cex=1.75, line=2.5)#
+counter <- 1#
+for (i in backgrounds) {#
+	Data <- Chisqs[which(results[,3] == i)]#
+	addHist(Y=counter, Dat=Data, Color=backgroundCol[counter])#
+	counter <- counter + 1#
+}#
+abline(v=11.70, lty=2, lwd=2, col='black')#
+#The backgrounds (paper) where fewer toothpicks could blend well had the smallest distribution to the right.#
+Simulation <- simDraws(10000)#
+addHist(Y=7, Dat=Simulation, Color="lightgray")#
+mtext(side=2, at=7, line=0, "simulated")#
+abline(v=11.70, lty=2, lwd=2)#
+Fit <- c(1, 1, 1, 1, 1, 1)#
+names(Fit) <- 1:6#
+Simulation2 <- simDraws(1e4, w=Fit)#
+addHist(Y=8, Dat=Simulation2, Color=rgb(0,0,0,0.25))#
+Fit <- c(0.1, 1, 1, 1, 1, 1)#
+names(Fit) <- 1:6#
+Simulation3 <- simDraws(1e4, w=Fit)#
+addHist(Y=8, Dat=Simulation5, Color=rgb(0,0,0,0.25))#
+Fit <- c(0.5, 0.6, 0.7, 1, 1, 1)#
+names(Fit) <- 1:6#
+Simulation4 <- simDraws(1e4, w=Fit)#
+addHist(Y=8, Dat=Simulation4, Color=rgb(0,0,0,0.25))#
+Fit <- c(0.1, 0.2, 0.3, 0.4, 0.5, 1)#
+names(Fit) <- 1:6#
+Simulation5 <- simDraws(1e4, w=Fit)#
+addHist(Y=8, Dat=Simulation5, Color=rgb(0,0,0,0.25))#
+Fit <- c(0.1, 0.1, 0.1, 0.1, 0.1, 1)#
+names(Fit) <- 1:6#
+Simulation6 <- simDraws(1e4, w=Fit)#
+addHist(Y=8, Dat=Simulation6, Color=rgb(0,0,0,0.25))#
+mtext(side=2, at=8, line=0, "sel.sim.")
+Simulation7 <- c(Simulation2, Simulation3, Simulation4, Simulation5, Simulation6)#
+addHist(Y=8, Dat=Simulation7, Color=rgb(0,0,1,0.25))
+par(las=1, mar=c(4, 4, 1, 1), mgp=c(2, 0.5, 0), tck=-0.01, cex.axis=1)#
+plot(1, 1, xlim=c(0, 400), ylim=c(1, 8.5), xlab="", ylab="", type="n", yaxt="n")#
+axis(2, at = 1:length(backgrounds), labels=backgrounds)#
+mtext(side=1, expression(chi^2), cex=1.75, line=2.5)#
+counter <- 1#
+for (i in backgrounds) {#
+	Data <- Chisqs[which(results[,3] == i)]#
+	addHist(Y=counter, Dat=Data, Color=backgroundCol[counter])#
+	counter <- counter + 1#
+}#
+abline(v=11.70, lty=2, lwd=2, col='black')#
+#The backgrounds (paper) where fewer toothpicks could blend well had the smallest distribution to the right.#
+Simulation <- simDraws(10000)#
+addHist(Y=7, Dat=Simulation, Color="lightgray")#
+mtext(side=2, at=7, line=0, "simulated")#
+abline(v=11.70, lty=2, lwd=2)#
+Fit <- c(1, 1, 1, 1, 1, 1)#
+names(Fit) <- 1:6#
+Simulation2 <- simDraws(1e4, w=Fit)#
+addHist(Y=8, Dat=Simulation2, Color=rgb(0,0,0,0.25))#
+Fit <- c(0.1, 1, 1, 1, 1, 1)#
+names(Fit) <- 1:6#
+Simulation3 <- simDraws(1e4, w=Fit)#
+addHist(Y=8, Dat=Simulation5, Color=rgb(0,0,0,0.25))#
+Fit <- c(0.5, 0.6, 0.7, 1, 1, 1)#
+names(Fit) <- 1:6#
+Simulation4 <- simDraws(1e4, w=Fit)#
+addHist(Y=8, Dat=Simulation4, Color=rgb(0,0,0,0.25))#
+Fit <- c(0.1, 0.2, 0.3, 0.4, 0.5, 1)#
+names(Fit) <- 1:6#
+Simulation5 <- simDraws(1e4, w=Fit)#
+addHist(Y=8, Dat=Simulation5, Color=rgb(0,0,0,0.25))#
+Fit <- c(0.1, 0.1, 0.1, 0.1, 0.1, 1)#
+names(Fit) <- 1:6#
+Simulation6 <- simDraws(1e4, w=Fit)#
+addHist(Y=8, Dat=Simulation6, Color=rgb(0,0,0,0.25))#
+mtext(side=2, at=8, line=0, "sel.sim.")#
+Simulation7 <- c(Simulation2, Simulation3, Simulation4, Simulation5, Simulation6)#
+addHist(Y=8, Dat=Simulation7, Color=rgb(0,0,1,0.25))
+simDraws <- function(nruns, ncols=6, nstart=10, nrounds=3, mu=0, twoway=TRUE, w=NULL) {#
+	Chiout <- c()#
+	for (j in 1:nruns) { #
+		Start <- rep(1:ncols, nstart)#
+		Pop <- Start#
+		for (i in 1:nrounds) {#
+			if (is.null(w)) {#
+				Draws <- sample(Pop, 20, replace = T) #
+			}#
+			else if (!is.null(w)) {#
+				if(length(setdiff(uniquePop), names(w))) == 0) {#
+					Draws <- sample(Pop, 20, replace=T, prob=w[Pop])#
+				}#
+				else if (length(setdiff(unique(Pop), names(w))) !=0) {#
+					cat("Not enough fitness values!", setdiff(unique(Pop), names(w)))#
+				}#
+			}#
+			Pop <- sort(c(Draws, Draws, Draws))#
+		}#
+		Summary <- c()#
+		for (k in 1:ncols) {#
+			Summary[k] <- length(which(Pop == k))#
+		}#
+		Chiout[j] <- sum(((Summary - nstart)62)/nstart)#
+	}#
+	return(CHiout)#
+}
+simDraws <- function(nruns, ncols=6, nstart=10, nrounds=3, mu=0, twoway=TRUE, w=NULL) {#
+	Chiout <- c()#
+	for (j in 1:nruns) { #
+		Start <- rep(1:ncols, nstart)#
+		Pop <- Start#
+		for (i in 1:nrounds) {#
+			if (is.null(w)) {#
+				Draws <- sample(Pop, 20, replace = T) #
+			}#
+			else if (!is.null(w)) {#
+				if(length(setdiff(uniquePop), names(w))) == 0) {#
+					Draws <- sample(Pop, 20, replace=T, prob=w[Pop])#
+				}#
+				else if (length(setdiff(unique(Pop), names(w))) !=0) {#
+					cat("Not enough fitness values!", setdiff(unique(Pop), names(w)))#
+				}#
+			}#
+			Pop <- sort(c(Draws, Draws, Draws))#
+		}#
+		Summary <- c()#
+		for (k in 1:ncols) {#
+			Summary[k] <- length(which(Pop == k))#
+		}#
+		Chiout[j] <- sum(((Summary - nstart)62)/nstart)#
+	}#
+	return(Chiout)#
+}
+simDraws <- function(nruns, ncols=6, nstart=10, nrounds=3, mu=0, twoway=TRUE, w=NULL)
+{#
+	Chiout <- c()
+for (j in 1:nruns) { #
+		Start <- rep(1:ncols, nstart)#
+		Pop <- Start
+for (i in 1:nrounds) {#
+			if (is.null(w)) {#
+				Draws <- sample(Pop, 20, replace = T) #
+			}#
+			else if (!is.null(w)) {#
+				if(length(setdiff(uniquePop), names(w))) == 0) {#
+					Draws <- sample(Pop, 20, replace=T, prob=w[Pop])#
+				}#
+				else if (length(setdiff(unique(Pop), names(w))) !=0) {#
+					cat("Not enough fitness values!", setdiff(unique(Pop), names(w)))#
+				}#
+			}#
+			Pop <- sort(c(Draws, Draws, Draws))
+simDraws <- function(nruns, ncols=6, nstart=10, nrounds=3, mu=0, twoway=TRUE, w=NULL) {#
+	Chiout <- c()#
+	for (j in 1:nruns) { #
+		Start <- rep(1:ncols, nstart)#
+		Pop <- Start#
+		for (i in 1:nrounds) {#
+			if (is.null(w)) {#
+				Draws <- sample(Pop, 20, replace = T)
+}#
+			else if (!is.null(w))
+if(length(setdiff(uniquePop), names(w))) == 0)
+simDraws <- function(nruns, ncols=6, nstart=10, nrounds=3, mu=0, twoway=TRUE, w=NULL)
+Simulation8 <- simDraws(1e4, mu=2)#
 #
-Line$coef#
-plot(Samples, tExt)#
-abline(Line)
-PopSizes <- 5:50
-PopSizes <- 5:50
-PopSizes <- 5:50
-PopSizes <- 5:50
-PopSizes <- 5:50
-PopSizes <- 5:50
-Samples <- rep(PopSizes, 5)
-tExt
-Line <- lm(tExt ~Samples)
-Line
-summary(Line)
-Line$coef
-plot(Samples, tExt)
-abline(Line)
-Line2 <- lm(tExt~Samples +0)
-Line2
-abline(Line)
-abline
-Line
-Line2
-install.packages('lmtest')
-install.packages('sandwich')
-summary(Line)
-bptest(Line)
-coeftest(Line, vcov = vcovHC(Line))
-install.packages('robustbase')
-Linerob <- lmrob(tExt~Samples)
-plot(Samples, tExt)
-abline(Line)
-pdf('r03ec-RobustHeteroskedasticity.pdf', height=5, width=5)
-plot(Samples, tExt)
-abline(Line, col='red')
-install.packages('lmtest')
-summary(Line)
-bptest(Line)
-libary(lmtest)#
-bptest(modelCH, data=KP)
-install.packages('lmtest')
-libary(lmtest)
-install.packages("lmtest")
-libary(lmtest)
-bptest(modelCH, data=KP)
-install.packages("lmtest")
-install.packages("sandwich")
-summary(Line)
-bptest(Line)
-install.packages("lmtest")
-install.packages("lmtest")
-summary(Line)
-bptest(Line)
-bptest(Line2)
-Line2 <- lm(tExt~Samples +0)
-Line2
-bptest(Line)
-bptest(Line2)
-coeftest(Line, vcov=vcovHC(Line))
-install.packages("robustbase")
-Linerob <- lmrob(tExt~Samples)
-summary(Linerob)
-plot(Samples, tExt)
-abline(Line)
-abline(Linerob)
-pdf("r03ec-RobustHeteroskedasticity.pdf", height = 5, width = 5)
-plot(Samples, tExt)
-abline(Line, col="red")
-abline(Linerob, col="blue")
-legend(x=20, y=400, legend=c("Robust", "Linear"), col=c("blue", "red"), lwd=1.2,, cex=0.8)
-dev.off()
-x <- genetic.drift(Ne=2, nrep=5, pause=0.01)
-x <- genetic.drift(Ne=45, nrep=5, pause=0.01)
-x <- genetic.drift(Ne=200, nrep=5, pause=0.01)
-PopSizes <- 5:50
-tExt <- sapply(Samples, function(x) nrow(simPop(x, 500)))
-tExt
-summary(Line)
-Line$coef
-plot(Samples, tExt)
-abline(Line)
-abline
-Line2 <- lm(tExt~Samples +0)
-Line2
+addHist(Y=8, Dat=Simulation8, Color=rgb(0,0,0,0.25))#
+#
+Simulation9 <- simDraws(1e4, mu=300)#
+#
+addHist(Y=8, Dat=Simulation9, Color=rgb(0,0,0,0.25))#
+#
+#The distribution gets wider and more to the right when you add more mutations. #
+Pop2 <- simPop(Popsize = 50, nGenerations = 100, initial_p = 0.5, h = 1, s = 0, mu=0, twoway = TRUE, w = NULL) #
+#
+plot(1:nrow(Pop2), Pop2[,1], ylim=c(0,1), type = 'l', xlab='generation', ylab='allele freq.', lwd=2 )#
+#
+lines(1:nrow(Pop2), Pop2[, 2], lwd=2, col='red')#
+#
+legend('topleft', legend = c('a', 'b'), col = c('black', 'red'), lwd = 2, bty='n')#
+Pop3 <- simPop(Popsize = 50, nGenerations = 100, initial_p = 0.5, h = 1, s = 0, mu=0.001, twoway = TRUE, w = NULL) #
+#
+plot(1:nrow(Pop3), Pop3[,1], ylim=c(0,1), type = 'l', xlab='generation', ylab='allele freq.', lwd=2 )#
+#
+lines(1:nrow(Pop3), Pop3[, 2], lwd=2, col='red')#
+#
+legend('topleft', legend = c('a', 'b'), col = c('black', 'red'), lwd = 2, bty='n')
+Simulation8 <- simDraws(1e4, mu=2)
+Simulation8 <- simDraws(1e4, mu=2)#
+addHist(Y=8, Dat=Simulation8, Color=rgb(0,0,0,0.25))#
+Simulation9 <- simDraws(1ef, mu=300)#
+addHist(Y=8, Data=Simulation9, Color+rgb=(0,0,0,0.25))
+simDraws <- function(nruns, ncols=6, nstart=10, nrounds=3, mu=0, twoway=TRUE, w=NULL)#
+Simulation8 <- simDraws(1e4, mu=2)#
+addHist(Y=8, Dat=Simulation8, Color=rgb(0,0,0,0.25))#
+Simulation9 <- simDraws(1ef, mu=300)#
+addHist(Y=8, Data=Simulation9, Color+rgb=(0,0,0,0.25))#
+Pop2 <- simPop(Popsize=50, nGenerations=100, initial_p=0.5, h=1, s=0, mu=0, twoway=TRUE, w=NULL)#
+plot(1:nrow(Pop2), Pop2[,1], ylim=c(0,1), type="l", xlab="generation", ylab="allele freq.", lwd=2)#
+lines(1:nrow(Pop2), Pop2[,2], lwd=2, col="red")#
+legend("topleft", legend=c("a", "b"), col=c("black", "red"), lwd=2, bty="n")#
+Pop3 <- simPop(Popsize=50, nGenerations=100, initial_p=0.5, h=1, s=0, mu=0.001, twoway=TRUE, w=NULL)#
+plot(1:nrow(Pop3), Pop3[,1], ylim=c(0,1), type="l", xlab="generation", ylab="allele freq.", lwd=2)#
+lines(1:nrow(Pop3), Pop3[,2], lwd=2, col="red")#
+legend("topleft", legend=c("a", "b"), col=c("black", "red"), lwd=2, bty="n")

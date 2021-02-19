@@ -22,7 +22,6 @@ legend("topleft", legend = c("a", "b"), col = c("black", "red"), lwd = 2, bty="n
 plotFit(nruns = 10, n = 5, negens = 100, init_p = 0.5, h=1, s=0)
 plotFit(nruns = 10, n = 5, ngens = 100, init_p = 0.5, h=1, s=0)
 Expectation <- c(10, 10, 10 10)
-Expectation <- c(10, 10, 10 10)
 Expectation <- c(10, 10, 10, 10)
 Observed <- c(15, 15, 5, 5)
 Chisq <- sum(((Expectation - Observed)^2/Expectation))
@@ -77,7 +76,6 @@ backgroundCol <- c("white", "#d53e4f", "#fee08b", "#abdda4", "#3288bd", "black")
 calcChi(counts[1,])
 Chisqs <- apply(counts, 1, calcChi)
 plotChis(counts)
-plotChis(counts)
 Avg <- mean(Chisqs)
 Avg
 backgroundAvgs <- tapply(Chisqs, results[,3], mean)
@@ -117,17 +115,6 @@ for (i in backgrounds) {#
 	counter <- counter + 1#
 }#
 abline(v=11.70, lty=2, lwd=2, col='black')
-counter <- 1#
-for (i in backgrounds) {#
-	Data <- Chisqs[which(results[,3] == i)]#
-	addHist(Y=counter, Dat=Data, Color=backgroundCol[counter])#
-	counter <- counter + 1#
-}#
-abline(v=11.70, lty=2, lwd=2, col='black')
-par(las=1, mar=c(4, 4, 1, 1), mgp=c(2, 0.5, 0), tck=-0.01, cex.axis=1)#
-plot(1, 1, xlim=c(0, 400), ylim=c(1, 8.5), xlab="", ylab="", type="n", yaxt="n")#
-axis(2, at = 1:length(backgrounds), labels=backgrounds)#
-mtext(side=1, expression(chi^2), cex=1.75, line=2.5)#
 counter <- 1#
 for (i in backgrounds) {#
 	Data <- Chisqs[which(results[,3] == i)]#

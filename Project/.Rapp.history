@@ -1,0 +1,15 @@
+setwd("C:\Users\EmilyGreen\Desktop\Evolution\Project")#
+Data <- read.csv("data.csv",stringAsFactors=F)
+setwd("c:\users\EmilyGreen\Desktop\Evolution\Project")#
+Data <- read.csv("data.csv",stringAsFactors=F)
+setwd('~/Desktop/Evolution/Tasks/Project')
+Data <- read.csv("data.csv",stringAsFactors=F)
+Data <- read.csv("DataSet.csv", stringAsFactors=F)
+setwd("~/Desktop/Evolution/Tasks/Project")
+setwd("~/Desktop/Evolution/Tasks/Project")#
+Data <- read.csv("DataSet.csv", stringAsFactors=F)
+Data <- read.csv("DataSet.csv")
+Data
+setwd("~/Desktop/Evolution/Tasks/Project")#
+Data <- read.csv("DataSet.csv")
+Data

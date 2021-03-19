@@ -20,3 +20,5 @@ addFit(nruns=50, n=100, ngens=18, startT=1997, simCol="gray40", rescale=TRUE)
 plot(alleleFreqs$d_freq, alleleFreqs$d_imm, xlim=c(-0.15, 0.15), xlab="overall freq. change", ylab="freq. change in subset")
 points(alleleFreqs$d_freq, alleleFreqs$d_birth, col='blue')
 points(alleleFreqs$d_freq, alleleFreq$d_surv, col='red')
+#Extra Credit 
+plot(rescaleFreq, dAlleles)

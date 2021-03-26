@@ -13,3 +13,85 @@ Data
 setwd("~/Desktop/Evolution/Tasks/Project")#
 Data <- read.csv("DataSet.csv")
 Data
+setwd("~/Desktop/Evolution/Tasks/Project")#
+Data <- read.csv("DataSet.csv")#
+Data
+setwd("~/Desktop/Evolution/Tasks/Project")#
+Data <- read.csv("DataSet.csv")#
+Data#
+plot(Data)
+plot(Data)
+setwd("~/Desktop/Evolution/Tasks/Project")#
+Data <- read.csv("DataSet.csv")#
+Data
+plot(Breed.name, Human.directed.play.behavior..mean.score)
+plot(Breed name, Human-directed play behavior)
+plot(Breedname, Human-directedplaybehavior)
+Breed <- (Breed name)
+plot(Data)
+plot(Breed.name)
+plot(Breed name)
+Breed <- which(Data[,1])
+setwd("~/Desktop/Evolution/Tasks/Project")#
+Data <- read.csv("DataSet.csv")#
+Data
+Breed <- which(Data[,4] == Male, Castrated and Male, Entire)
+Sex <- which(Data[,4] == 'Male, Castrated' and 'Male, Entire')
+Sex <- which(Data[,4] == 'Male')
+Sex
+Male <- which(Data[,4] == 'Male')
+Female <- which(Data[,4] == 'Female')
+plot(Male, Female)
+avgWeight <- mean(Data[,6]) == 'Male')
+avgWeight <- mean(Data[,6])
+setwd("~/Desktop/Evolution/Tasks/Project")#
+Data <- read.csv("DataSet.csv")#
+Data
+Male <- which(Data[,3] == 'M')
+Female <- which(Data[,3] == 'F')
+Region <- (Data[,5])
+Weight <- (Data[,6])
+plot(Region,Weight)
+plot(abs(Region), Weight, log="y")
+plot(Region), Weight, log="y")
+plot(Region, Weight, log="y")
+TailLength <- (Data[,9])
+plot(TailLength, Weight, log="y")
+plot(abs(TailLength), Weight, log="y")
+Weight <- (Data[,7])
+Region <- (Data[,6])#
+TailLength <- (Data[,9])#
+Weight <- (Data[,7])#
+plot(abs(TailLength), Weight, log="y")
+plot(abs(TailLength), Weight, log="y")#
+abline(lm(TailLength, Weight)
+plot(abs(TailLength), Weight, log="y")#
+abline(lm(TailLength, Weight, col="black",lty=1)
+plot(abs(TailLength), Weight, log="y")#
+abline(plot)
+abline
+plot(abs(TailLength), Weight, log="y")#
+abline
+setwd("~/Desktop/Evolution/Tasks/Project")#
+Data <- read.csv("DataSet.csv")#
+Data2 <- read.csv("DataSet2.csv")#
+Data#
+Male <- which(Data[,3] == 'M')#
+Female <- which(Data[,3] == 'F')#
+Region <- (Data[,6])#
+TailLength <- (Data[,9])#
+Weight <- (Data[,7])#
+plot(abs(TailLength), Weight, log="y")
+Data2 <- read.csv("DataSet2.csv")
+Data2
+setwd("~/Desktop/Evolution/Tasks/Project")#
+Data <- read.csv("DataSet.csv")#
+Data2 <- read.csv("DataSet2.csv")#
+Data#
+Data2#
+Male <- which(Data[,3] == 'M')#
+Female <- which(Data[,3] == 'F')#
+Region <- (Data[,6])#
+TailLength <- (Data[,9])#
+Weight <- (Data[,7])#
+plot(abs(TailLength), Weight, log="y")

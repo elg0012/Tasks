@@ -7,6 +7,13 @@ Male <- which(Data[,3] == 'M')
 Female <- which(Data[,3] == 'F')
 Region <- (Data[,6])
 TailLength <- (Data[,9])
-Weight <- (Data[,7])
-plot(abs(TailLength), Weight, log="y")
- 
+BodyMass <- (Data[,7])
+plot(abs(TailLength), BodyMass, log="y")
+abline(lm(BodyMass ~ TailLength))
+citation()
+Southeast <- which(Data[,6] == 'Southeast')
+Southeast
+West <- which(Data[,6] == 'West')
+West
+Northeast <- which(Data[,6] == 'Northeast')
+Northeast

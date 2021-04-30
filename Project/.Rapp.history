@@ -317,7 +317,145 @@ plot(abs(TailLength), BodyMass, log="y")#
 abline(lm(BodyMass ~ TailLength)
 plot(abs(TailLength), BodyMass, log="y")#
 abline(lm(BodyMass ~ TailLength))
+setwd("~/Desktop/Evolution/Tasks/Project")#
+Data <- read.csv("DataSet.csv")#
+Data2 <- read.csv("DataSet2.csv")#
+Data#
+Data2#
+Male <- which(Data[,3] == 'M')#
+Female <- which(Data[,3] == 'F')#
+Region <- (Data[,6])#
+TailLength <- (Data[,9])#
+BodyMass <- (Data[,7])#
 plot(abs(TailLength), BodyMass, log="y")#
-abline(lm(BodyMass ~ TailLength))
+abline(lm(BodyMass ~ TailLength))#
+citation()#
+Southeast <- which(Data[,6] == 'Southeast')#
+Southeast#
+West <- which(Data[,6] == 'West')#
+West#
+Northeast <- which(Data[,6] == 'Northeast')#
+Northeast
+setwd("~/Desktop/Evolution/Tasks/Project")#
+Data <- read.csv("DataSet.csv")#
+Data2 <- read.csv("DataSet2.csv")#
+Data#
+Data2#
+Male <- which(Data[,3] == 'M')#
+Female <- which(Data[,3] == 'F')#
+Region <- (Data[,6])#
+TailLength <- (Data[,9])#
+BodyMass <- (Data[,7])#
 plot(abs(TailLength), BodyMass, log="y")#
-abline(lm(BodyMass ~ TailLength))
+abline(lm(BodyMass ~ abs(TailLength))#
+citation()#
+Southeast <- which(Data[,6] == 'Southeast')#
+Southeast#
+West <- which(Data[,6] == 'West')#
+West#
+Northeast <- which(Data[,6] == 'Northeast')#
+Northeast
+setwd("~/Desktop/Evolution/Tasks/Project")#
+Data <- read.csv("DataSet.csv")#
+Data2 <- read.csv("DataSet2.csv")#
+Data#
+Data2#
+Male <- which(Data[,3] == 'M')#
+Female <- which(Data[,3] == 'F')#
+Region <- (Data[,6])#
+TailLength <- (Data[,9])#
+BodyMass <- (Data[,7])#
+plot(abs(TailLength), BodyMass, log="y")#
+abline(lm(BodyMass ~ abs(TailLength)))#
+citation()#
+Southeast <- which(Data[,6] == 'Southeast')#
+Southeast#
+West <- which(Data[,6] == 'West')#
+West#
+Northeast <- which(Data[,6] == 'Northeast')#
+Northeast
+lm(BodyMass ~ abs(TailLength))
+setwd("~/Desktop/Evolution/Tasks/Project")#
+Data <- read.csv("DataSet.csv")#
+Data2 <- read.csv("DataSet2.csv")#
+Data#
+Data2#
+Male <- which(Data[,3] == 'M')#
+Female <- which(Data[,3] == 'F')#
+Region <- (Data[,6])#
+TailLength <- (Data[,9])#
+BodyMass <- (Data[,7])#
+plot(abs(TailLength), BodyMass, log="y")#
+abline(lm(abs(TailLength)~BodyMass))#
+citation()#
+Southeast <- which(Data[,6] == 'Southeast')#
+Southeast#
+West <- which(Data[,6] == 'West')#
+West#
+Northeast <- which(Data[,6] == 'Northeast')#
+Northeast
+setwd("~/Desktop/Evolution/Tasks/Project")#
+Data <- read.csv("DataSet.csv")#
+Data2 <- read.csv("DataSet2.csv")#
+Data#
+Data2#
+Male <- which(Data[,3] == 'M')#
+Female <- which(Data[,3] == 'F')#
+Region <- (Data[,6])#
+TailLength <- (Data[,9])#
+BodyMass <- (Data[,7])#
+plot(abs(TailLength), BodyMass)#
+abline(lm(abs(TailLength)~BodyMass))#
+citation()#
+Southeast <- which(Data[,6] == 'Southeast')#
+Southeast#
+West <- which(Data[,6] == 'West')#
+West#
+Northeast <- which(Data[,6] == 'Northeast')#
+Northeast
+setwd("~/Desktop/Evolution/Tasks/Project")#
+Data <- read.csv("DataSet.csv")#
+Data2 <- read.csv("DataSet2.csv")#
+Data#
+Data2#
+Male <- which(Data[,3] == 'M')#
+Female <- which(Data[,3] == 'F')#
+Region <- (Data[,6])#
+TailLength <- (Data[,9])#
+BodyMass <- (Data[,7])#
+plot(abs(TailLength), BodyMass)#
+Mod <- lm(BodyMass ~ abs(TailLength))#
+abline(Mod)#
+citation()#
+Southeast <- which(Data[,6] == 'Southeast')#
+Southeast#
+West <- which(Data[,6] == 'West')#
+West#
+Northeast <- which(Data[,6] == 'Northeast')#
+Northeast
+setwd("~/Desktop/Evolution/Tasks/Project")#
+Data <- read.csv("DataSet.csv")#
+Data2 <- read.csv("DataSet2.csv")#
+Data#
+Data2#
+Male <- which(Data[,3] == 'M')#
+Female <- which(Data[,3] == 'F')#
+Region <- (Data[,6])#
+TailLength <- (Data[,9])#
+BodyMass <- (Data[,7])#
+plot(abs(TailLength), BodyMass)#
+Mod <- lm(BodyMass ~ abs(TailLength))#
+abline(Mod, col="red")
+setwd("~/Desktop/Evolution/Tasks/Project")#
+Data <- read.csv("DataSet.csv")#
+Data2 <- read.csv("DataSet2.csv")#
+Data#
+Data2#
+Male <- which(Data[,3] == 'M')#
+Female <- which(Data[,3] == 'F')#
+Region <- (Data[,6])#
+TailLength <- (Data[,9])#
+BodyMass <- (Data[,7])#
+plot(abs(TailLength), BodyMass)#
+Mod <- lm(BodyMass ~ abs(TailLength))#
+abline(Mod, col="red")

@@ -1,0 +1,252 @@
+library(diversitree)
+install.packages("diversitree")
+library("diversitree")
+library(ape)
+library("diversitree")
+transition_0to1 <- 0.1#
+transition_1to0 <- 0.1#
+#
+speciation_0 <- 0.2#
+extinction_0 <- 0.1#
+#
+speciation_1 <- 0.2#
+extinction_1 <- 0.1
+maxN <- 1e3
+maxT <- 50
+Pars <- c(speciation_0, speciation_1, extinction_0, extinction_1, transition_0to1, transition_1to0)#
+simTree <- tree.bidee(Pars, max.taxa=maxN, max.t=maxT)#
+str(simTree)#
+?tree.bisse
+Pars <- c(speciation_0, speciation_1, extinction_0, extinction_1, transition_0to1, transition_1to0)#
+simTree <- tree.bisee(Pars, max.taxa=maxN, max.t=maxT)#
+str(simTree)#
+?tree.bisse
+Pars <- c(speciation_0, speciation_1, extinction_0, extinction_1, transition_0to1, transition_1to0)
+simTree <- tree.bisee(Pars, max.taxa=maxN, max.t=maxT)
+Pars <- c(speciation_0, speciation_1, extinction_0, extinction_1, transition_0to1, transition_1to0)#
+simTree <- tree.bisse(Pars, max.taxa=maxN, max.t=maxT)#
+str(simTree)
+stateTable <- table(simTree$tip.state)#
+stateTable / sum(stateTable)
+Frequencies <- c("State0", "State1")
+Colors <- c("red", "blue")#
+Data <- matrix(0.3, 0.32, 0.33, 0.35, 0.43, 0.56, 0.568, 0.57, 0.642, 0.647, 0.68, 0.69)
+Data <- matrix(c(0.3, 0.32, 0.33, 0.35, 0.43, 0.56, 0.568, 0.57, 0.642, 0.647, 0.68, 0.69), nrow=2, ncol=6, byrow=TRUE)
+Difference <- c(0.01, 0.02, 0.03. 0.05, 0.1, 0.15)#
+Frequencyof1 <- c(0.3, 0.32, 0.33, 0.35, 0.43, 0.568)#
+Frequencyof0 <- c(0.43, 0.57, 0.642, 0.647, 0.68, 0.69)#
+pdf("Question1.pdf", height=6, width=6)
+Difference <- c(0.01, 0.02, 0.03, 0.05, 0.1, 0.15)#
+Frequencyof1 <- c(0.3, 0.32, 0.33, 0.35, 0.43, 0.568)#
+Frequencyof0 <- c(0.43, 0.57, 0.642, 0.647, 0.68, 0.69)#
+pdf("Question1.pdf", height=6, width=6)
+barplot(Data, names.arg=Difference, main="Change in Frequency of the States Based on Variation in the R Values", xlab="Difference in Rate of Diversification", ylab="Frequency", beside=TRUE, col=c("orange", "blue"))
+install.packages("diversitree")#
+library(ape)#
+library("diversitree")#
+transition_0to1 <- 0.1#
+transition_1to0 <- 0.1#
+#
+speciation_0 <- 0.2#
+extinction_0 <- 0.1#
+#
+speciation_1 <- 0.2#
+extinction_1 <- 0.1#
+maxN <- 1e3#
+maxT <- 50#
+Pars <- c(speciation_0, speciation_1, extinction_0, extinction_1, transition_0to1, transition_1to0)#
+simTree <- tree.bisse(Pars, max.taxa=maxN, max.t=maxT)#
+str(simTree)#
+?tree.bisse#
+stateTable <- table(simTree$tip.state)#
+stateTable / sum(stateTable)#
+Frequencies <- c("State0", "State1")#
+Colors <- c("red", "blue")#
+Data <- matrix(c(0.3, 0.32, 0.33, 0.35, 0.43, 0.56, 0.568, 0.57, 0.642, 0.647, 0.68, 0.69), nrow=2, ncol=6, byrow=TRUE)#
+#Question 1: An inversely proportional relationship between the frequency of state 1 and the net diversification, and a lowered speciation rate would have to be present for state 1 to be higher than state 0 when the net diversification of state 1 is lower than that of state 0. #
+Difference <- c(0.01, 0.02, 0.03, 0.05, 0.1, 0.15)#
+Frequencyof1 <- c(0.3, 0.32, 0.33, 0.35, 0.43, 0.568)#
+Frequencyof0 <- c(0.43, 0.57, 0.642, 0.647, 0.68, 0.69)#
+pdf("Question1.pdf", height=6, width=6)#
+barplot(Data, names.arg=Difference, main="Change in Frequency of the States Based on Variation in the R Values", xlab="Difference in Rate of Diversification", ylab="Frequency", beside=TRUE, col=c("orange", "blue"))
+pdf("Question1.pdf", height=6, width=6)#
+barplot(Data, names.arg=Difference, main="Change in Frequency of the States Based on Variation in the R Values", xlab="Difference in Rate of Diversification", ylab="Frequency", beside=TRUE, col=c("pink", "blue"))
+barplot(Data, names.arg=Difference, main="Change in Frequency of the States Based on Variation in the R Values", xlab="Difference in Rate of Diversification", ylab="Frequency", beside=TRUE, col=c("pink", "blue"))
+Frequencyof0 <- c(0.43, 0.57, 0.642, 0.647, 0.68, 0.69)#
+pdf("Question1.pdf", height=6, width=6)
+pdf("Question1.pdf", height=6, width=6)#
+barplot(Data, names.arg=Difference, main="Change in Frequency of the States Based on Variation in the R Values", xlab="Difference in Rate of Diversification", ylab="Frequency", beside=TRUE, col=c("pink", "blue"))#
+legend("topright", Frequencies, fill=Colors)
+Pars <- c(speciation_0, speciation_1, extinction_0, extinction_1, transition_0to1, transition_1to0)#
+simTree <- tree.bisse(Pars, max.taxa=maxN, max.t=maxT)#
+str(simTree)#
+?tree.bisse#
+stateTable <- table(simTree$tip.state)#
+stateTable / sum(stateTable)#
+Frequencies <- c("State0", "State1")#
+Colors <- c("pink", "blue")#
+Data <- matrix(c(0.3, 0.32, 0.33, 0.35, 0.43, 0.56, 0.568, 0.57, 0.642, 0.647, 0.68, 0.69), nrow=2, ncol=6, byrow=TRUE)#
+#Question 1: An inversely proportional relationship between the frequency of state 1 and the net diversification, and a lowered speciation rate would have to be present for state 1 to be higher than state 0 when the net diversification of state 1 is lower than that of state 0. #
+Difference <- c(0.01, 0.02, 0.03, 0.05, 0.1, 0.15)#
+Frequencyof1 <- c(0.3, 0.32, 0.33, 0.35, 0.43, 0.568)#
+Frequencyof0 <- c(0.43, 0.57, 0.642, 0.647, 0.68, 0.69)#
+pdf("Question1.pdf", height=6, width=6)#
+barplot(Data, names.arg=Difference, main="Change in Frequency of the States Based on Variation in the R Values", xlab="Difference in Rate of Diversification", ylab="Frequency", beside=TRUE, col=c("pink", "blue"))#
+legend("topright", Frequencies, fill=Colors)
+dev.off()
+install.packages("diversitree")#
+library(ape)#
+library("diversitree")#
+transition_0to1 <- 0.1#
+transition_1to0 <- 0.1#
+#
+speciation_0 <- 0.2#
+extinction_0 <- 0.1#
+#
+speciation_1 <- 0.2#
+extinction_1 <- 0.1#
+maxN <- 1e3#
+maxT <- 50#
+Pars <- c(speciation_0, speciation_1, extinction_0, extinction_1, transition_0to1, transition_1to0)#
+simTree <- tree.bisse(Pars, max.taxa=maxN, max.t=maxT)#
+str(simTree)#
+?tree.bisse#
+stateTable <- table(simTree$tip.state)#
+stateTable / sum(stateTable)#
+Frequencies <- c("State0", "State1")#
+Colors <- c("pink", "blue")#
+Data <- matrix(c(0.35, 0.32, 0.3, 0.35, 0.56, 0.43, 0.568, 0.50, 0.632, 0.647, 0.58, 0.69), nrow=2, ncol=6, byrow=TRUE)#
+#Question 1: An inversely proportional relationship between the frequency of state 1 and the net diversification, and a lowered speciation rate would have to be present for state 1 to be higher than state 0 when the net diversification of state 1 is lower than that of state 0. #
+Difference <- c(0.01, 0.02, 0.03, 0.05, 0.1, 0.15)#
+Frequencyof1 <- c(0.3, 0.32, 0.33, 0.35, 0.43, 0.568)#
+Frequencyof0 <- c(0.43, 0.57, 0.642, 0.647, 0.68, 0.69)#
+pdf("Question1.pdf", height=6, width=6)#
+barplot(Data, names.arg=Difference, main="Change in Frequency of the States Based on Variation in the R Values", xlab="Difference in Rate of Diversification", ylab="Frequency", beside=TRUE, col=c("pink", "blue"))#
+legend("topright", Frequencies, fill=Colors)#
+dev.off()
+Frequencies <- c("State0", "State1")#
+Data <- matrix(c(0.65, 0.7, 0.28, 0.21, 0.34, 0.76, 0.23, 0.778, 0.634, 0.23, 0.07))
+Data
+Difference <- c(0.05, 0, 0.1, 0.2, 0.3, 0.45)#
+pdf("Question2.pdf", height=8, width=8)
+barplot(Data, names.arg=Difference, main="Close to Zero State 1 for Transition Rate of Nonzero", xlab="Difference in Diversification Rate", ylab="Frequencies", col=c("pink", "blue"))#
+legend("topright", Frequencies, fill="pink", "blue")#
+dev.off()
+barplot(Data, names.arg=Difference, main="Close to Zero State 1 for Transition Rate of Nonzero", xlab="Difference in Diversification Rate", ylab="Frequencies", col=c("pink", "blue"))
+pdf("Question2.pdf", height=8, width=8)#
+barplot(Data, names.arg=Difference, main="Close to Zero State 1 for Transition Rate of Nonzero", xlab="Difference in Diversification Rate", ylab="Frequencies", col=c("pink", "blue"))
+Data <- matrix(c(0.65, 0.7, 0.28, 0.21, 0.34, 0.76, 0.23, 0.778, 0.634, 0.23, 0.07), nrow=2, ncol=17, byrow=TRUE)
+Data <- matrix(c(0.65, 0.7, 0.28, 0.21, 0.34, 0.23, 0.778, 0.634, 0.23, 0.07), nrow=2, ncol=17, byrow=TRUE)
+Data <- matrix(c(0.65, 0.7, 0.28, 0.21, 0.34, 0.23, 0.778, 0.634, 0.23, 0.07), nrow=2, ncol=6, byrow=TRUE)
+Data <- matrix(c(0.65, 0.7, 0.28, 0.21, 0.34, 0.23, 0.778, 0.634, 0.23, 0.07), nrow=2, ncol=20, byrow=TRUE)
+Data#
+Difference <- c(0.05, 0, 0.1, 0.2, 0.3, 0.45)#
+pdf("Question2.pdf", height=8, width=8)#
+barplot(Data, names.arg=Difference, main="Close to Zero State 1 for Transition Rate of Nonzero", xlab="Difference in Diversification Rate", ylab="Frequencies", col=c("pink", "blue"))#
+legend("topright", Frequencies, fill="pink", "blue")#
+dev.off()
+Difference <- c(0.05, 0.05, 0, 0, 0, 0.1, 0.1, 0.1, 0.2, 0.2, 0.2, 0.3, 0.3, 0.3, 0.45, 0.45, 0.45)#
+pdf("Question2.pdf", height=8, width=8)#
+barplot(Data, names.arg=Difference, main="Close to Zero State 1 for Transition Rate of Nonzero", xlab="Difference in Diversification Rate", ylab="Frequencies", col=c("pink", "blue"))
+Frequencies <- c("State0", "State1")#
+Data <- matrix(c(0.65, 0.7, 0.28, 0.21, 0.34, 0.23, 0.778, 0.634, 0.23, 0.07), nrow=2, ncol=20, byrow=TRUE)#
+Data#
+Difference <- c(0.05, 0.05, 0, 0, 0, 0.1, 0.1, 0.1, 0.2, 0.2, 0.2, 0.3, 0.3, 0.3, 0.45, 0.45, 0.45)#
+pdf("Question2.pdf", height=8, width=8)#
+barplot(Data, names.arg=Difference, main="The Closeness of State 1 to Zero with Transition Rate Being Nonzero", xlab="Difference in Diversification Rate", ylab="Frequencies", col=c("pink", "blue"))#
+legend("topright", Frequencies, fill="pink", "blue")
+barplot(Data, names.arg=Difference, main="The Closeness of State 1 to Zero with Transition Rate Being Nonzero", xlab="Difference in Diversification Rate", ylab="Frequencies", col=c("pink", "blue"))
+Frequencies <- c("State0", "State1")#
+Colors <- c("pink", "blue")#
+Data <- matrix(c(0.65, 0.7, 0.28, 0.21, 0.34, 0.23, 0.778, 0.634, 0.23, 0.07), nrow=2, ncol=20, byrow=TRUE)#
+Data#
+Difference <- c(0.05, 0.05, 0, 0, 0, 0.1, 0.1, 0.1, 0.2, 0.2, 0.2, 0.3, 0.3, 0.3, 0.45, 0.45, 0.45)#
+pdf("Question2.pdf", height=8, width=8)#
+barplot(Data, names.arg=Difference, main="The Closeness of State 1 to Zero with Transition Rate Being Nonzero", xlab="Difference in Diversification Rate", ylab="Frequencies", col=c("pink", "blue"))#
+legend("topright", Frequencies, fill="pink", "blue")
+Data <- matrix(c(0.65, 0.7, 0.28, 0.21, 0.34, 0.23, 0.778, 0.634, 0.23, 0.07, 0.027, 0.016, 0.984, 0.18, 0.37, 0.077, 0.978, 0.987, 0.559, 0.123, 0.456, 0.78, 0.91, 0.223, 0.48, 0.101, 0.578, 0.339, 0.89, 0.20, 0.309, 0.46, 0.71, 0.872), nrow=2, ncol=17, byrow=TRUE)
+Data
+Difference <- c(0.05, 0.05, 0, 0, 0, 0.1, 0.1, 0.1, 0.2, 0.2, 0.2, 0.3, 0.3, 0.3, 0.45, 0.45, 0.45)
+pdf("Question2.pdf", height=8, width=8)#
+barplot(Data, names.arg=Difference, main="The Closeness of State 1 to Zero with Transition Rate Being Nonzero", xlab="Difference in Diversification Rate", ylab="Frequencies", col=c("pink", "blue"))#
+legend("topright", Frequencies, fill="pink", "blue")
+dev.off()
+Data <- read.csv("C:\Users\EmilyGreen\Desktop\Evolution\Tasks\Task_10\Question3_Data.csv", stringAsFactorsF)
+Data <- read.csv("C:\\Users\EmilyGreen\Desktop\Evolution\Tasks\Task_10\Question3_Data.csv", stringAsFactorsF)
+Data <- read.csv("C:\\Users\EmilyGreen\\Desktop\\Evolution\\Tasks\\Task_10\\Question3_Data.csv", stringAsFactorsF)
+#Question 3: There was little variance in the frequency, but it was there. #
+Data <- read.csv("~/Desktop/Evolution/Tasks/Task_10/Question3Data.csv", stringAsFactors=F)
+Data <- read.csv("~/Desktop/Evolution/Tasks/Task_10/Question3Data.csv", stringAsFactors=F)
+Data <- read.csv("~/Desktop/Evolution/Tasks/Task_10/Question3Data.csv")
+#Question 3: There was little variance in the frequency, but it was there. #
+Data <- read.csv("~/Desktop/Evolution/Tasks/Task_10/Question3Data.csv")
+Data <- read.csv("~/Desktop/Evolution/Tasks/Task_10/Question3Data.csv", stringAsFactors=F)
+Data <- read.csv("~/Desktop/Evolution/Tasks/Task_10.csv", stringAsFactors=F)
+Data <- read.csv("~/Desktop/Evolution/Tasks/Task_10.csv")
+Data <- read.csv("C:\\Users\\emilylaurengreen\\Desktop\\Evolution\\Tasks\\Task_10\\Question3_Data.csv", stringAsFactors=F)
+Data <- read.csv("~/Desktop/Evolution/Tasks/Task_10/Question3_Data.csv", stringAsFactors=F)
+Data
+Data <- read.csv("~/Desktop/Evolution/Tasks/Task_10/Question3_Data.csv", stringsAsFactors=F)
+#Question 3: There was little variance in the frequency, but it was there. #
+Data <- read.csv("~/Desktop/Evolution/Tasks/Task_10.csv", stringsAsFactors=F)
+setwd("~/Desktop/Evolution/Tasks/Task_10.csv", stringsAsFactors=F)
+setwd("~/Desktop/Evolution/Tasks/Task_10.csv")
+Data <- read.csv("~/Desktop/Evolution/Tasks/Task_10.csv", stringsAsFactors=F)#
+Data
+Data <- read.csv("~/Desktop/Evolution/Tasks/Task_10/Question3Data.csv", stringsAsFactors=F)
+Data
+Data <- read.csv("~/Desktop/Evolution/Tasks/Task_10/Question3Data.csv", stringsAsFactors=F)
+Frequencies <- c("State0", "State1")#
+Colors <- c("pink", "blue")#
+Data3 <- matrix(c(0.65, 0.7, 0.28, 0.21, 0.34, 0.23, 0.778, 0.634, 0.23, 0.07, 0.027, 0.016, 0.984, 0.18, 0.37, 0.077, 0.978, 0.987, 0.559, 0.123, 0.456, 0.78, 0.91, 0.223, 0.48, 0.101, 0.578, 0.339, 0.89, 0.20, 0.309, 0.46, 0.71, 0.872), nrow=2, ncol=17, byrow=TRUE)#
+Data#
+Difference <- c(0.05, 0.05, 0, 0, 0, 0.1, 0.1, 0.1, 0.2, 0.2, 0.2, 0.3, 0.3, 0.3, 0.45, 0.45, 0.45)#
+pdf("Question2.pdf", height=8, width=8)#
+barplot(Data, names.arg=Difference, main="The Closeness of State 1 to Zero with Transition Rate Being Nonzero", xlab="Difference in Diversification Rate", ylab="Frequencies", col=c("pink", "blue"))#
+legend("topright", Frequencies, fill="pink", "blue")#
+dev.off()
+Data <- read.csv("~/Desktop/Evolution/Tasks/Task_10/Question3Data.csv", stringsAsFactors=F)#
+Data
+Data
+Frequency1Trial1 <- Data[,2]
+Frequency1Trial1 <- Data[,2]#
+Frequency1Trial2 <- Data[,5]#
+Frequency1Trial3 <- Data[,8]#
+Variance <- var(Frequency1Trial1)#
+Variance2 <- var(Frequency1Trial2)#
+Variance3 <- var(Frequency1Trial3)
+Variance1#
+Variance2#
+Variance3
+Variance1 <- var(Frequency1Trial1)#
+Variance2 <- var(Frequency1Trial2)#
+Variance3 <- var(Frequency1Trial3)#
+Variance1#
+Variance2#
+Variance3
+TotalVarianceMatrix <- c(Variance1, Variance2, Variance3)
+TotalVarianceMatrix
+Trial <- c(1,2,3)#
+pdf("Question3.pdf", height=8, width=8)
+barplot(TotalVarianceMatrix, names.arg=Trial, ylim=c(0,0.5), xlab="Trial Number", ylab="Variance with Different Frequencies", col="purple")
+dev.off()
+Data
+Freq_0 <- Data[,2]#
+Freq_0#
+NDR_0 <- Data[,1]#
+pdf("MyTrend1.pdf", height=8, width=8)#
+plot(NDR_0, Freq_0, xlab="Net Diversification Rate of State 0", ylab="Frequency of State 0", main="Net Diversification Rate Influences Frequency")
+abline(lm(Freq_0~NDR_0), col="pink", lty="dashed")
+dev.off()
+Freq_01 <- Data[,7]#
+NDR_1 <- Data[,5]
+pdf("MyTrend2.pdf", height=8, width=8)#
+plot(NDR_1, Freq_1, xlab="Net Diversification of State 1", ylab="Frequency of State 1", main="Net Diversification Rate Influences Frequency")#
+abline(lm(Freq_1~NDR_1), col="pink", lty="dashed")#
+dev.off()
+Freq_01 <- Data[,7]#
+NDR_1 <- Data[,5]#
+pdf("MyTrend2.pdf", height=8, width=8)#
+plot(NDR_1, Freq_01, xlab="Net Diversification of State 1", ylab="Frequency of State 1", main="Net Diversification Rate Influences Frequency")#
+abline(lm(Freq_01~NDR_1), col="pink", lty="dashed")#
+dev.off()

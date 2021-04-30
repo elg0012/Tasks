@@ -8,8 +8,12 @@ Female <- which(Data[,3] == 'F')
 Region <- (Data[,6])
 TailLength <- (Data[,9])
 BodyMass <- (Data[,7])
-plot(abs(TailLength), BodyMass, log="y")
-abline(lm(BodyMass ~ TailLength))
+plot(abs(TailLength), BodyMass)
+Mod <- lm(BodyMass ~ abs(TailLength))
+abline(Mod, col="red")
+
+
+
 citation()
 Southeast <- which(Data[,6] == 'Southeast')
 Southeast
